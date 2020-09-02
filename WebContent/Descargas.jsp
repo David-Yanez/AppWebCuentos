@@ -64,7 +64,7 @@
 					<p class="text-center">
 						<img src="img/elgatoconbotas.jpg" height="200px" width="200px"
 							alt="elgatoconbotas" title="elgatoconbotas">
-							<a href=”img/pdf/elgatoconbotas.pdf” title=”elgatoconbotas”><h5
+							<a href=img/pdf/elgatoconbotas.pdf title=”elgatoconbotas”><h5
 							class="text-center">El gato conbotas</h5></a>
 					</p>
 
@@ -81,7 +81,7 @@
 							alt="3cerditos" title="3cerditos">
 					</p>
 
-					<a href=”img/pdf/lostrescerditos.pdf” title=”elgatoconbotas”><h5
+					<a href=img/pdf/lostrescerditos.pdf title=”elgatoconbotas”><h5
 							class="text-center">El gato conbotas</h5></a>
 				</div>
 
@@ -95,7 +95,7 @@
 							alt="reyleon" title="reyleon">
 					</p>
 
-					<a href=”img/pdf/elreyleon.pdf” title=”elgatoconbotas”><h5
+					<a href=img/pdf/elreyleon.pdf title=”elgatoconbotas”><h5
 							class="text-center">El gato conbotas</h5></a>
 				</div>
 
@@ -109,7 +109,7 @@
 							alt="pinocho" title="pinocho">
 					</p>
 
-					<a href=”img/pdf/pinocho.pdf” title=”pinocho”><h5
+					<a href=img/pdf/pinocho.pdf title=”pinocho”><h5
 							class="text-center">Pinocho</h5></a>
 				</div>
 
