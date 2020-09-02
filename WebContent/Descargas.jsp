@@ -52,18 +52,69 @@
         
        
     </nav>
-    <div class="container-fluid">
-    
-    Hola 
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
+	<div class="container-fluid">
+
+		<h4 class="text-center bg-success">
+			<a class="text-white ">Descargar cuentos en PDF</a>
+			</h1>
+
+			<div class="row">
+
+				<div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<p class="text-center">
+						<img src="img/elgatoconbotas.jpg" height="200px" width="200px"
+							alt="elgatoconbotas" title="elgatoconbotas">
+							<a href=”img/pdf/elgatoconbotas.pdf” title=”elgatoconbotas”><h5
+							class="text-center">El gato conbotas</h5></a>
+					</p>
+
+
+				</div>
+
+			</div>
+			
+			<div class="row">
+
+				<div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<p class="text-center">
+						<img src="img/3cerditos.jpg" height="200px" width="200px"
+							alt="3cerditos" title="3cerditos">
+					</p>
+
+					<a href=”img/pdf/lostrescerditos.pdf” title=”elgatoconbotas”><h5
+							class="text-center">El gato conbotas</h5></a>
+				</div>
+
+			</div>
+			
+			<div class="row">
+
+				<div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<p class="text-center">
+						<img src="img/reyleon.jpg" height="200px" width="200px"
+							alt="reyleon" title="reyleon">
+					</p>
+
+					<a href=”img/pdf/elreyleon.pdf” title=”elgatoconbotas”><h5
+							class="text-center">El gato conbotas</h5></a>
+				</div>
+
+			</div>
+			
+			<div class="row">
+
+				<div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<p class="text-center">
+						<img src="img/pinocho.jpg" height="200px" width="200px"
+							alt="pinocho" title="pinocho">
+					</p>
+
+					<a href=”img/pdf/pinocho.pdf” title=”pinocho”><h5
+							class="text-center">Pinocho</h5></a>
+				</div>
+
+			</div>
+	</div>
 
 </body>
 </html>
