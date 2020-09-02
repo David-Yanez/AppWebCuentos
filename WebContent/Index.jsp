@@ -69,7 +69,9 @@
     </nav>
     <div class="container-fluid">
     
+
     <div>  
+
     
       <div class="slider">
         <div><img  src="img/cuentosInfantiles.jpg" height="300px" width="1500px" alt="hojas" title="hojas"></div>
