@@ -57,6 +57,17 @@
     <h2 class="text-center">Registro de Cuentos y Fabulas</h2>
     
  <br>  
+ 
+ <%!public String obtieneAtributo(HttpServletRequest request, String nombre){
+	String valor=(String) request.getAttribute(nombre);
+	   if(valor==null){
+		   valor="";
+	   }
+	return valor;
+	}	
+%>
+ 
+ 
    
    <div class="row">
       
@@ -71,12 +82,11 @@
       
       
   <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-  <form>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Nombre del Cuento: </span>
       </div>
-      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      <input type="text" class="form-control" value="<%=obtieneAtributo(request, "valNombreCu")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div> 
  
     </div>
@@ -87,7 +97,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Autor: </span>
       </div>
-      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      <input type="text" class="form-control"  value="<%=obtieneAtributo(request, "valAutor")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div> 
     
     </div>
