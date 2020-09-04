@@ -23,8 +23,8 @@ public class Cuento {
 	private String autor;
 	@Column
 	private String descripcion;
-	@Column
-	private byte[] archivo ; 
+	/*@Column
+	private byte[] archivo ; */
 	@Column
 	private Integer id_usuario;
 	
@@ -70,12 +70,12 @@ public class Cuento {
 		this.descripcion = descripcion;
 	}
 	
-	public byte[] getArchivo() {
+	/*public byte[] getArchivo() {
 		return archivo;
 	}
 	public void setArchivo(byte[] archivo) {
 		this.archivo = archivo;
-	}
+	}*/
 	
 	public Integer getId_usuario() {
 		return id_usuario;
@@ -84,8 +84,4 @@ public class Cuento {
 		this.id_usuario = id_usuario;
 	}
 
-	
-	
-	
-	
 }
