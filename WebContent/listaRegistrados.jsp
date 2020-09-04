@@ -33,16 +33,16 @@
 
  <tbody>
   	<%
-	List<Cuento> cuentos;
-	cuentos= (List<Cuento>)request.getAttribute("cuentos");
-	for (Cuento l:cuentos) {
-		%> 
+  		List<Cuento> cuentos;
+  	  		cuentos= (List<Cuento>)request.getAttribute("cuentos");
+  	  		for (Cuento c:cuentos) {
+  	%> 
   <tr>
-      <th scope="row"><%= l.getId_cuentos()%></th>
-      <td><%= l.getNombreCU() %></td>
-      <td><%= l.getAutor() %></td>
-       <td><%= l.getTipo() %></td>
-      <td><%= l.getGenero() %></td>
+      <th scope="row"><%= c.getId_cuentos()%></th>
+      <td><%= c.getNombrecu() %></td>
+      <td><%= c.getAutor() %></td>
+       <td><%= c.getTipo() %></td>
+      <td><%= c.getGenero() %></td>
     </tr>
  
 <%}%>
