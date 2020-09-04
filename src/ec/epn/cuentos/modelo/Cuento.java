@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.swing.JFileChooser;
 
 @Entity
 public class Cuento {
@@ -18,13 +17,13 @@ public class Cuento {
 	@Column
 	private String genero;
 	@Column
-	private String nombreCU;
+	private String nombrecu;
 	@Column
 	private String autor;
 	@Column
 	private String descripcion;
-	/*@Column
-	private byte[] archivo ; */
+	@Column
+	private byte[] archivo ; 
 	@Column
 	private Integer id_usuario;
 	
@@ -51,11 +50,11 @@ public class Cuento {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-	public String getNombreCU() {
-		return nombreCU;
+	public String getNombrecu() {
+		return nombrecu;
 	}
-	public void setNombreCU(String nombreCU) {
-		this.nombreCU = nombreCU;
+	public void setNombrecu(String nombrecU) {
+		this.nombrecu = nombrecU;
 	}
 	public String getAutor() {
 		return autor;
@@ -70,12 +69,12 @@ public class Cuento {
 		this.descripcion = descripcion;
 	}
 	
-	/*public byte[] getArchivo() {
+	public byte[] getArchivo() {
 		return archivo;
 	}
 	public void setArchivo(byte[] archivo) {
 		this.archivo = archivo;
-	}*/
+	}
 	
 	public Integer getId_usuario() {
 		return id_usuario;
