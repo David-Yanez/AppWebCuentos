@@ -17,6 +17,16 @@
 </head>
 <body>
 
+<div>
+
+<jsp:include page="RegiCuen.jsp"/>
+
+
+</div>
+
+<br>
+<br>
+<br>
   
 <table class="table table-hover">
 
@@ -33,16 +43,17 @@
 
  <tbody>
   	<%
-  		List<Cuento> cuentos;
-  	  		cuentos= (List<Cuento>)request.getAttribute("cuentos");
-  	  		for (Cuento c:cuentos) {
+  		List<Object[]> cuentos;
+  	  		cuentos= (List<Object[]>)request.getAttribute("cuentos");
+  	  		for (Object[] c:cuentos) {
   	%> 
   <tr>
-      <th scope="row"><%= c.getId_cuentos()%></th>
-      <td><%= c.getNombrecu() %></td>
-      <td><%= c.getAutor() %></td>
-       <td><%= c.getTipo() %></td>
-      <td><%= c.getGenero() %></td>
+      <th scope="row"><%= c[0]%></th>
+      <td><%= c[3] %></td>
+      <td><%= c[4] %></td>
+       <td><%= c[1] %></td>
+      <td><%= c[2] %></td>
+     
     </tr>
  
 <%}%>

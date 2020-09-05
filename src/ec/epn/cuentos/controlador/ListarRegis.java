@@ -38,9 +38,13 @@ public class ListarRegis extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 	
-		Query q = em.createQuery("Select c from Cuento as c", Cuento.class);
+	//	Query q = em.createQuery("Select c from Cuento c", Cuento.class);
 		
-		List<Cuento> cuentos= q.getResultList();
+	//	Query q = em.createQuery("SELECT c.id_cuentos,c.tipo,c.genero,c.nombrecu,c.autor FROM Cuento  as c", Cuento.class);
+		Query q = em.createQuery("SELECT id_cuentos,tipo,genero,nombrecu,autor FROM Cuento");
+		
+		List<Object[]> cuentos = q.getResultList();
+		//List<Cuento> cuentos= q.getResultList();
 		
 		 request.setAttribute("cuentos",cuentos);
 		

@@ -40,7 +40,7 @@
               <a class="nav-link" href="Descargas.jsp">Descargas</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="RegiCuen.jsp">Registrar Cuento</a>
+              <a class="nav-link" href="ListarRegis">Registrar Cuento</a>
             </li>
           
              
@@ -69,13 +69,13 @@
     
  <br>  
  
-    <form method="post" action="Impri">
+    <form method="post" action="RegistroCuento">
    <div class="row">
       
        
        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
          
-      <select class="custom-select mr-sm-2" name="tipo" value="<%=obtieneAtributo(request, "valNombreCu")%>">
+      <select class="custom-select mr-sm-2" name="tipo" value="<%=obtieneAtributo(request, "valTipo")%>">
         <option selected>Tipo de historia</option>
         <option  value="Cuento">Cuento</option>
         <option  value="Fabula">Fabula</option>
@@ -148,8 +148,21 @@
     </div>
        
      </form>
+     
+     
+     <div>      
+           <%--  <jsp:include page="ListarRegis"/>
+                 <jsp:include page="listaRegistrados.jsp"/> --%>  
+               
+
+</div>
+     
+  
     </div>
     
+
+
+
 
 
 

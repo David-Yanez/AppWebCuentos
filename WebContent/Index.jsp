@@ -48,7 +48,7 @@
               <a class="nav-link" href="Descargas.jsp">Descargas</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="RegiCuen.jsp">Registrar Cuento</a>
+              <a class="nav-link" href="ListarRegis">Registrar Cuento</a>
             </li>
           
              
