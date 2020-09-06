@@ -20,7 +20,7 @@
 			</li>
 			<li class="nav-item"><a class="nav-link" href="Cuentos.jsp">Cuentos</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="Fabulas.jsp">FÃ¡bulas</a>
+			<li class="nav-item"><a class="nav-link" href="Fabulas.jsp">Fábulas</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="Descargas.jsp">Descargas</a>
 			</li>
@@ -35,7 +35,7 @@
 			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 		</form>
 		<li class="navbar-nav nav-item  my-2 my-lg-0"><a class="nav-link"
-			href="Login.jsp">Iniciar SesiÃ³n</a></li>
+			href="Login.jsp">Iniciar Sesión</a></li>
 		<li class="navbar-nav nav-item my-2 my-lg-0"><a class="nav-link"
 			href="Registrar.jsp">Registrar</a></li>
 

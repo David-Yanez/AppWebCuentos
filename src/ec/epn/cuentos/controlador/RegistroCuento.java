@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
-
-import javax.ejb.TransactionAttribute;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.ServletException;
@@ -50,48 +48,41 @@ public class RegistroCuento extends HttpServlet {
  
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		em.getTransaction().begin();
+	//	OutputStream os=response.getOutputStream();
+		response.setContentType("text/html; charset=ISO-8859-1");
+		
 		String tipo=request.getParameter("tipo");
 	   String genero=request.getParameter("genero");
 		String nombrecu=request.getParameter("nombreCu");
 		String autor=request.getParameter("autor");
 		String descripcion=request.getParameter("descripcion");
 		//String archivo=request.getParameter("archivo");
-		String id_usuarioooo=request.getParameter("id_usuario");
+		String id_usuario=request.getParameter("id_usuario");
+		
+		//PrintWriter out=new PrintWriter(os);
+
 	
-		
-		int id_us = Integer.parseInt(id_usuarioooo);
-		
-		/*	OutputStream os=response.getOutputStream();
-		response.setContentType("text/html; charset=ISO-8859-1");
+		if (tipo.trim().equals("") || nombrecu.trim().equals("") || genero.trim().equals("") || autor.trim().equals("") || descripcion.trim().equals("") || id_usuario.trim().equals("") ) {
 			
-			PrintWriter out=new PrintWriter(os);
-			out.print("<html>");
+		//	PrintWriter out=new PrintWriter(os);
+			/*out.print("<html>");
 			out.print("<body> ");
-	
+			out.print("alert('User or password incorrect');");
+			out.print("</body>");
+			out.print("</html>");*/
+			/*  out.println("<script type=\"text/javascript\">");
+			   out.println("alert(\"User or password incorrect\");");
+			 //  out.println("location='listaRegistrados.jsp';");
+			   out.println("</script>");*/
 			
-			out.print("<H1> "+tipo+ " </H1>");
-			out.print("<H1> "+genero+ " </H1>");
-			out.print("<H1> "+nombrecu+ " </H1>");
-			out.print("<H1> "+autor+ " </H1>");
-			out.print("<H1> "+descripcion+ " </H1>");
+			   request.setAttribute("valError","Datos sin llenar");
+				
+			//	request.getRequestDispatcher("listaRegistrados.jsp").forward(request,response);			
+				request.getRequestDispatcher("ListarRegis").forward(request,response);			
+				
 		
-			out.print("<H1> "+id_usuario+ " </H1>");
-			
-		if(nombrecu.trim().equals("") || autor.trim().equals("")  ){
-				
-			    request.setAttribute("valTipo", tipo );
-			    request.setAttribute("valGenero", genero );
-				request.setAttribute("valNombreCu", nombrecu );
-				request.setAttribute("valAutor", autor );
-				request.setAttribute("valDescripcion", descripcion );
-				//request.setAttribute("valArchivo", archi);
-				request.setAttribute("valId_usuario", id_usuario );
-				
-				out.print("<H1> Campos sin llenar </H1>");
-				
-			//	request.setAttribute("valError", "Titulo o autor sin llenar" );
-		} else {*/
+		}else {
+			int id_us = Integer.parseInt(id_usuario);
 			
 	 Cuento Cuen = new Cuento ();
 	 Usuario us = new Usuario ();
@@ -103,29 +94,14 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setAutor(autor);
 			Cuen.setDescripcion(descripcion);
 		//	Cuen.setArchivo(archi);
-		//	Cuen.setId_usuario(Usuario.id_us);
-		//	Cuen.setId_usuario(Usuario, id_us);
+	
 			Cuen.setId_usuario(us);
-			
 			
 			
 			em.persist(Cuen);  
 			
-			
-		//	request.getRequestDispatcher("Index,jsp").forward(request, response);
-
-		//      em.getTransaction().commit();
-			//}
-
-		
-		/*out.print("</body>");
-			out.print("</html>");
-			
-			out.flush();
-			out.close();
-			os.close();*/
-		
-		
+			request.getRequestDispatcher("ListarRegis").forward(request, response);
+		}
 			
 	}
 

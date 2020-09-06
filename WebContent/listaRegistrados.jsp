@@ -42,14 +42,17 @@
   
 
  <tbody>
+ 
+ 
   	<%
   		List<Object[]> cuentos;
   	  		cuentos= (List<Object[]>)request.getAttribute("cuentos");
   	  		for (Object[] c:cuentos) {
+  	  	//		 int id = new Integer(c[0]);
   	%> 
   <tr>
       <th scope="row"><%= c[0]%></th>
-      <td><%= c[3] %></td>
+      <td><a href= "EditarCuento?id_cuentos=<%= c[0]%>"><%= c[3] %></a></td>
       <td><%= c[4] %></td>
        <td><%= c[1] %></td>
       <td><%= c[2] %></td>

@@ -5,16 +5,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
 <link
     rel="Stylesheet"
     type="text/css"
     href="css/bootstrap.min.css"
 ></link>
-
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
+></link>
 </head>
 <body>
-    <%!public String obtieneAtributo(HttpServletRequest request, String nombre){
+
+
+  <%!public String obtieneAtributo(HttpServletRequest request, String nombre){
 	String valor=(String) request.getAttribute(nombre);
 	   if(valor==null){
 		   valor="";
@@ -63,7 +68,7 @@
  
     <div class="container-fluid">
     <br>
-    <h2 class="text-center">Registro de Cuentos y Fabulas</h2>
+    <h2 class="text-center">Actualizacion  de Cuentos y Fabulas</h2>
     
 
       
@@ -71,7 +76,7 @@
     
  <br>  
  
-    <form method="post" action="RegistroCuento">
+    <form method="post" action="ActualizarCuento">
    <div class="row">
       
        
@@ -108,8 +113,8 @@
     
        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
          
-      <select class="custom-select mr-sm-2" name="genero" value="<%=obtieneAtributo(request, "valGenero")%>" >
-        <option selected>Genero</option>
+      <select class="custom-select mr-sm-2" name="genero" selected="true"  value="<%=obtieneAtributo(request, "valGenero")%>" >
+        <option selected="true" value="<%=obtieneAtributo(request, "valGenero")%>">Genero</option>
         <option value="Clasico">Clasico</option>
         <option value="Misterio">Misterio</option>
         <option value="Terror">Terror</option>
@@ -124,7 +129,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Descripcion: </span>
       </div>
-     <textarea class="form-control" name="descripcion" value ="<%=obtieneAtributo(request, "valDescripcion")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default"></textarea>
+     <textarea class="form-control" name="descripcion" value ="<%=obtieneAtributo(request, "valDescripcion")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default"><%=obtieneAtributo(request, "valDescripcion")%></textarea>
     </div> 
     
     </div>
@@ -144,15 +149,22 @@
       <input type="text" class="form-control" name="id_usuario" value="<%=obtieneAtributo(request, "valId_usuario")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div> 
     
-     <button class="btn btn-primary" type="submit" >Guardar</button>
+        <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text"  id="inputGroup-sizing-default">Id_Cuento: </span>
+      </div>
+      <input type="text" class="form-control" name="id_cuentos" value="<%=obtieneAtributo(request, "valId_cuentos")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div> 
+    
+     <button class="btn btn-primary" type="submit" >Actualizar</button>
  
-   
+    
     </div>
        
      </form>
      
     
-     
+     <button class="btn btn-primary" >Eliminar</button>
      <div>      
 		 <p style="color:red"><%= obtieneAtributo(request,"valError") %></p>
 </div>
@@ -160,6 +172,7 @@
   
     </div>
     
+
 
 
 

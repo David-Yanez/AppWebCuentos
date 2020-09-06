@@ -1,8 +1,6 @@
 package ec.epn.cuentos.controlador;
 
 import java.io.IOException;
-import java.sql.Date;
-
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,24 +9,24 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.transaction.Transactional;
 
+//import ec.epn.adm.libros.modelo.Libro;
 import ec.epn.cuentos.modelo.Cuento;
-import ec.epn.cuentos.modelo.Usuario;
 
 /**
- * Servlet implementation class Regi
+ * Servlet implementation class EditarCuento
  */
-@Transactional
-@WebServlet("/Regi")
-public class Regi extends HttpServlet {
+@WebServlet("/EditarCuento")
+public class EditarCuento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
 	@PersistenceContext (unitName = "poryectoCuentos" )
-	private EntityManager em; 
+	private EntityManager em;
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Regi() {
+    public EditarCuento() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,41 +36,24 @@ public class Regi extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-	
-Cuento c = new Cuento (); 	
-
-Usuario us = new Usuario();
-
-//Date fe = new Date(int 1995, int 11, int 16);
-
-
-
-us.setId_usuario(2);
-us.setNombre("Jose");
-us.setApellido("Perez");
-us.setSexo("Hombre");
-
-us.setCorreo("jose.peres@gmail.com");
-us.setPassword("12345");
-
-
- 
-
- 
-/*c.setTipo("Cuento");
-c.setGenero("Clasico");
-c.setNombrecu("Los 3 cerditos");
-c.setAutor("yo");
-c.setDescripcion("Excelente libro para los niños");
-c.setId_usuario(us);*/
-	
-   em.persist(us);  
-   
-   request.getRequestDispatcher("Index,jsp").forward(request, response);
-
-	
+	//	response.getWriter().append("Served at: ").append(request.getContextPath());
+		String parametro = request.getParameter("id_cuentos");
+		
+		Cuento cu= em.find(Cuento.class, new Integer(parametro));
+		
+		request.setAttribute("valTipo", cu.getTipo());
+		request.setAttribute("valNombreCu", cu.getNombrecu());
+		request.setAttribute("valAutor", cu.getAutor());
+		request.setAttribute("valGenero", cu.getGenero());
+		request.setAttribute("valDescripcion", cu.getDescripcion());
+		//request.setAttribute("valId_usuario", cu.getId_usuario());
+	//	request.setAttribute("valId_cuentos", cu.getId_cuentos());
+		request.setAttribute("valId_usuario", parametro);
+		request.setAttribute("valId_cuentos", parametro);
+		
+		
+		request.getRequestDispatcher("editarEliminarCuento.jsp").forward(request,response);
+		
 	}
 
 	/**

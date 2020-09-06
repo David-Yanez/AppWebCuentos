@@ -26,13 +26,14 @@ public class Cuento {
 	@Column
 	private String descripcion;
 	
-	@Lob
+	//@Lob
 	@Column
 	private byte[] archivo ; 
 	
 	@ManyToOne
 	//@Column
-	@JoinColumn
+	@JoinColumn (name="id_usuario", referencedColumnName = "id_usuario")
+	
 	private Usuario id_usuario;
 
 	public Integer getId_cuentos() {
