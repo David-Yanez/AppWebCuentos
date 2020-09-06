@@ -31,8 +31,8 @@ public class Cuento {
 	private byte[] archivo ; 
 	
 	@ManyToOne
-	@Column
-	//@JoinColumn
+	//@Column
+	@JoinColumn
 	private Usuario id_usuario;
 
 	public Integer getId_cuentos() {
