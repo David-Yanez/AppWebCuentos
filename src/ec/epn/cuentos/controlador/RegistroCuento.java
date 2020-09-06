@@ -26,7 +26,7 @@ import ec.epn.cuentos.modelo.Usuario;
 
 
 @Transactional
-@TransactionAttribute
+
 @WebServlet("/RegistroCuento")
 public class RegistroCuento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -48,7 +48,7 @@ public class RegistroCuento extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
  
-    @Transactional
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		em.getTransaction().begin();
 		String tipo=request.getParameter("tipo");
