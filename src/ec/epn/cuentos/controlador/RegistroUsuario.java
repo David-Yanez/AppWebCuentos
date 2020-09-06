@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.transaction.Transactional;
 
 
-import ec.epn.cuentos.modelo.usuario;
+import ec.epn.cuentos.modelo.Usuario;
 
 /**
  * Servlet implementation class RegistroUsuario
@@ -44,22 +44,22 @@ public class RegistroUsuario extends HttpServlet {
 		String año = request.getParameter("año");
 		String mes = request.getParameter("mes");
 		String dia = request.getParameter("dia");
-		String fecha = año+"-"+mes+"-"+dia;
+	//	String fecha = año+"-"+mes+"-"+dia;
 
 		
 		String correo = request.getParameter("correo");
 		String password = request.getParameter("password1");
 		
-		System.out.println("Datos del usuario a guardar: nombre:" + nombre 
+	/*	System.out.println("Datos del usuario a guardar: nombre:" + nombre 
 				 + " apellido: " + apellido+ " sexo: " + sexo
 				 + " Fecha nacimiento: "+ fecha + " correo: "+ correo
-				 + " password: "+ password);
+				 + " password: "+ password);*/
 		
 		
 		if (nombre.trim().equals("") || 
 				apellido.trim().equals("") || 
 				sexo.trim().equals("") || 
-				fecha.trim().equals("")|| 
+			//	fecha.trim().equals("")|| 
 				correo.trim().equals("") || 
 				password.trim().equals("")) {
 			System.out.println("HOLA");
@@ -76,11 +76,11 @@ public class RegistroUsuario extends HttpServlet {
 			System.out.println("CHAO");
 			
 			
-			usuario u = new usuario();
+			Usuario u = new Usuario();
 			u.setNombre(nombre);
 			u.setApellido(apellido);
 			u.setSexo(sexo);
-			u.setFechanac(fecha);
+		//	u.setFechanac(fecha);
 			u.setCorreo(correo);
 			u.setPassword(password);
 			

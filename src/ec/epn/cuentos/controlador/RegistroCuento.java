@@ -57,10 +57,10 @@ public class RegistroCuento extends HttpServlet {
 		String autor=request.getParameter("autor");
 		String descripcion=request.getParameter("descripcion");
 		//String archivo=request.getParameter("archivo");
-		String id_usuario=request.getParameter("id_usuario");
+		String id_usuarioooo=request.getParameter("id_usuario");
 	
 		
-		int id_us = Integer.parseInt(id_usuario);
+		int id_us = Integer.parseInt(id_usuarioooo);
 		
 		/*	OutputStream os=response.getOutputStream();
 		response.setContentType("text/html; charset=ISO-8859-1");

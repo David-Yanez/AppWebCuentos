@@ -2,6 +2,8 @@ package ec.epn.cuentos.modelo;
 
 
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class usuario {
+public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	
@@ -21,7 +23,7 @@ private String apellido;
 	@Column
 private String sexo;
 	@Column
-private String fechanac;
+private Date fechanac;
 	@Column
 private String correo;
 	@Column
@@ -54,12 +56,8 @@ private String password;
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public String getFechanac() {
-		return fechanac;
-	}
-	public void setFechanac(String fechanac) {
-		this.fechanac = fechanac;
-	}
+
+	
 	public String getCorreo() {
 		return correo;
 	}
@@ -71,6 +69,12 @@ private String password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Date getFechanac() {
+		return fechanac;
+	}
+	public void setFechanac(Date fechanac) {
+		this.fechanac = fechanac;
 	}
 	
 	
