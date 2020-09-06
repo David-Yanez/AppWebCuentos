@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1"">
 <title>Registrarse</title>
 
 <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
@@ -45,15 +45,6 @@
 	<div class="container-fluid">
 
 
-
-
-
-
-
-
-
-
-
 		<center>
 			<h1>Registrarse</h1>
 
@@ -65,20 +56,19 @@
 				return valor;
 				}	
 				%>
-
-			<p><%=obtieneAtributo(request, "valError")%></p>
-
+			<p style="color:red"><%= obtieneAtributo(request,"valError") %></p>
+			
 			<table size="35" ; style="font-family: Arial" border="0">
-				<form method="post" action="Cuentos.jsp">
+				<form method="post" action="RegistroUsuario">
 					<tr>
 						<td>Nombre:</td>
 
-						<td><input type="text" name="nombreCaja"
+						<td><input type="text" name="nombre"
 							value="<%=obtieneAtributo(request, "valNombre")%>" /></td>
 					</tr>
 					<tr>
 						<td>Apellido:</td>
-						<td><input type="text" name="apellidoCaja"
+						<td><input type="text" name="apellido"
 							value="<%=obtieneAtributo(request, "valApellido")%>" /></td>
 					</tr>
 					<tr>
@@ -99,10 +89,10 @@
 								<option value="04">04</option>
 						</select>
 						<select name="mes" id="mes">
-								<option value="Enero">Enero</option>
-								<option value="Febrero">Febrero</option>
-								<option value="Marzo">Marzo</option>
-								<option value="Abril">Abril</option>
+								<option value="01">Enero</option>
+								<option value="02">Febrero</option>
+								<option value="03">Marzo</option>
+								<option value="04">Abril</option>
 						</select>
 						<select name="año" id="año">
 								<option value="2020">2020</option>
@@ -119,13 +109,13 @@
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="pass1"
-							value="<%=obtieneAtributo(request, "valPass1")%>" /></td>
+						<td><input type="password" name="password1"
+							value="<%=obtieneAtributo(request, "valPassword")%>" /></td>
 					</tr>
 					<tr>
 						<td>Repita la contraseña:</td>
-						<td><input type="password" name="pass2"
-							value="<%=obtieneAtributo(request, "valPass2")%>" /></td>
+						<td><input type="password" name="password2"
+							value="<%=obtieneAtributo(request, "valPassword2")%>" /></td>
 					</tr>
 					<tr>
 					<tr>
