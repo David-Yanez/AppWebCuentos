@@ -1,6 +1,8 @@
 package ec.epn.cuentos.controlador;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.text.ParseException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -41,19 +43,17 @@ public class RegistroUsuario extends HttpServlet {
 		String nombre = request.getParameter("nombre");
 		String apellido = request.getParameter("apellido");
 		String sexo = request.getParameter("sexo");
-		String año = request.getParameter("año");
-		String mes = request.getParameter("mes");
-		String dia = request.getParameter("dia");
-	//	String fecha = aÃ±o+"-"+mes+"-"+dia;
-
+		Date fechaNac=Date.valueOf(request.getParameter("fecha"));
+		
+		
 		
 		String correo = request.getParameter("correo");
 		String password = request.getParameter("password1");
 		
-	/*	System.out.println("Datos del usuario a guardar: nombre:" + nombre 
+		System.out.println("Datos del usuario a guardar: nombre:" + nombre 
 				 + " apellido: " + apellido+ " sexo: " + sexo
-				 + " Fecha nacimiento: "+ fecha + " correo: "+ correo
-				 + " password: "+ password);*/
+				 + " Fecha nacimiento: "+ fechaNac + " correo: "+ correo
+				 + " password: "+ password);
 		
 		
 		if (nombre.trim().equals("") || 
@@ -80,7 +80,7 @@ public class RegistroUsuario extends HttpServlet {
 			u.setNombre(nombre);
 			u.setApellido(apellido);
 			u.setSexo(sexo);
-		//	u.setFechanac(fecha);
+			u.setFechanac(fechaNac);
 			u.setCorreo(correo);
 			u.setPassword(password);
 			
@@ -100,6 +100,8 @@ public class RegistroUsuario extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
+	
+	
 	
 	
 
