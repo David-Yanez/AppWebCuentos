@@ -84,17 +84,17 @@
 			           <td>   <input type="date" name="fecha">  </td>
 					</tr>
 					<tr>
-						<td>Correo electrÃ³nico:</td>
+						<td>Correo electrónico:</td>
 						<td><input type="text" name="correo"
 							value="<%=obtieneAtributo(request, "valCorreo")%>" /></td>
 					</tr>
 					<tr>
-						<td>ContraseÃ±a:</td>
+						<td>Contraseña:</td>
 						<td><input type="password" name="password1"
 							value="<%=obtieneAtributo(request, "valPassword")%>" /></td>
 					</tr>
 					<tr>
-						<td>Repita la contraseÃ±a:</td>
+						<td>Repita la contraseña:</td>
 						<td><input type="password" name="password2"
 							value="<%=obtieneAtributo(request, "valPassword2")%>" /></td>
 					</tr>
@@ -112,17 +112,6 @@
 			</table>
 			<a class="nav-link" href="Login.jsp">Ya tiene una cuenta creada.</a>
 		</center>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

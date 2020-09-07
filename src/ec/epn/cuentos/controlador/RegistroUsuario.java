@@ -41,7 +41,7 @@ public class RegistroUsuario extends HttpServlet {
 		String nombre = request.getParameter("nombre");
 		String apellido = request.getParameter("apellido");
 		String sexo = request.getParameter("sexo");
-		String a√±o = request.getParameter("a√±o");
+		String aÒo = request.getParameter("aÒo");
 		String mes = request.getParameter("mes");
 		String dia = request.getParameter("dia");
 	//	String fecha = a√±o+"-"+mes+"-"+dia;
