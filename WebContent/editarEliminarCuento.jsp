@@ -163,8 +163,14 @@
        
      </form>
      
+     
+     <form method="post" action="EliminarCuento">
     
-     <button class="btn btn-primary" >Eliminar</button>
+      <button class="btn btn-primary" type="submit" ><a href= "EditarCuento?id_cuentos=<%=obtieneAtributo(request, "valId_cuentos")%>">Eliminar</a></button>
+     </form>
+     
+    
+   
      <div>      
 		 <p style="color:red"><%= obtieneAtributo(request,"valError") %></p>
 </div>

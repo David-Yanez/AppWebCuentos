@@ -49,7 +49,7 @@ public class RegistroCuento extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	//	OutputStream os=response.getOutputStream();
-		response.setContentType("text/html; charset=ISO-8859-1");
+		//response.setContentType("text/html; charset=ISO-8859-1");
 		
 		String tipo=request.getParameter("tipo");
 	   String genero=request.getParameter("genero");
