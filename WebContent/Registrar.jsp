@@ -58,6 +58,8 @@
 				%>
 			<p style="color:red"><%= obtieneAtributo(request,"valError") %></p>
 			
+			
+			
 			<table size="35" ; style="font-family: Arial" border="0">
 				<form method="post" action="RegistroUsuario">
 					<tr>
@@ -74,9 +76,9 @@
 					<tr>
 						<td>Sexo <br />
 						</td>
-						<td><input type="radio" name="sexo" value="hombre" /> Hombre
-							<input type="radio" name="sexo" value="mujer" /> Mujer 
-							<input type="radio" name="sexo" value="otro" /> Otro
+						<td><input type="radio" name="sexo" value="Hombre" /> Hombre
+							<input type="radio" name="sexo" value="Mujer" /> Mujer 
+							<input type="radio" name="sexo" value="Otro" /> Otro
 						</td>
 					</tr>
 					<tr>
@@ -90,14 +92,10 @@
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="password1"
+						<td><input type="password" name="password"
 							value="<%=obtieneAtributo(request, "valPassword")%>" /></td>
 					</tr>
-					<tr>
-						<td>Repita la contraseña:</td>
-						<td><input type="password" name="password2"
-							value="<%=obtieneAtributo(request, "valPassword2")%>" /></td>
-					</tr>
+					
 					<tr>
 					<tr>
 						<td></td>

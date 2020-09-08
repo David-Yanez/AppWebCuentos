@@ -44,11 +44,10 @@ public class RegistroUsuario extends HttpServlet {
 		String apellido = request.getParameter("apellido");
 		String sexo = request.getParameter("sexo");
 		Date fechaNac=Date.valueOf(request.getParameter("fecha"));
-		
-		
+		String fechaN=request.getParameter("fecha");
 		
 		String correo = request.getParameter("correo");
-		String password = request.getParameter("password1");
+		String password = request.getParameter("password");
 		
 		System.out.println("Datos del usuario a guardar: nombre:" + nombre 
 				 + " apellido: " + apellido+ " sexo: " + sexo
@@ -59,23 +58,23 @@ public class RegistroUsuario extends HttpServlet {
 		if (nombre.trim().equals("") || 
 				apellido.trim().equals("") || 
 				sexo.trim().equals("") || 
-			//	fecha.trim().equals("")|| 
+				fechaN.equals("") || 
 				correo.trim().equals("") || 
 				password.trim().equals("")) {
-			System.out.println("HOLA");
+
+
+			
 			request.setAttribute("valNombre",nombre);
-			request.setAttribute("valApellido",apellido);
+			request.setAttribute("valApellido",apellido);			
 			request.setAttribute("valCorreo",correo);
-			request.setAttribute("valPassword",password);
-			request.setAttribute("valPassword2",password);
+
 			
 			request.setAttribute("valError","Datos sin llenar");
 			
 			request.getRequestDispatcher("Registrar.jsp").forward(request,response);			
 		}else {
-			System.out.println("CHAO");
 			
-			
+
 			Usuario u = new Usuario();
 			u.setNombre(nombre);
 			u.setApellido(apellido);
@@ -89,6 +88,7 @@ public class RegistroUsuario extends HttpServlet {
 
 			
 			request.getRequestDispatcher("Login.jsp").forward(request,response);
+
 		}
 	
 	
