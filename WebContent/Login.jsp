@@ -65,20 +65,20 @@
 				}	
 				%>
 
-			<p><%=obtieneAtributo(request, "valError")%></p>
+			<p style="color:red"><%=obtieneAtributo(request, "valError")%></p>
 
 			<table  size="35" ; style="font-family: Arial" border="0">
-				<form method="post" action="Cuentos.jsp">
+				<form method="post" action="LoginUsuario">
 					<tr>
-						<td>Usuario:</td>
+						<td>Correo:</td>
 
-						<td><input type="text" name="usuario_caja"
-							value="<%=obtieneAtributo(request, "valUsuario")%>" /></td>
+						<td><input type="text" name="correo"
+							value="<%=obtieneAtributo(request, "valCorreo")%>" /></td>
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="pass"
-							value="<%=obtieneAtributo(request, "valPass")%>" />
+						<td><input type="password" name="password"
+							value="<%=obtieneAtributo(request, "valPassword")%>" />
 						</td>
 					</tr>
 					<tr>
