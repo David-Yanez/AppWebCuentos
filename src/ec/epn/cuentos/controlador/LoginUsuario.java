@@ -55,18 +55,21 @@ public class LoginUsuario extends HttpServlet {
 		}else {
 			
 			
-			
 			Query q = em.createQuery("SELECT password	FROM Usuario where correo='"+correo+"'");
-			
 			String passwordTraida = (String) q.getSingleResult();
 			
-			 System.out.println(passwordTraida);
-			 
+			if(passwordTraida.equals(password)){
+				
+				request.getRequestDispatcher("Index.jsp").forward(request,response);
+				
+			}else {
+				
+				request.setAttribute("valError","Usuario o contraseña invalidos");
+				request.getRequestDispatcher("Login.jsp").forward(request,response);
 
+			}
 			
 			
-			request.getRequestDispatcher("Index.jsp").forward(request,response);
-
 			
 			
 		}
