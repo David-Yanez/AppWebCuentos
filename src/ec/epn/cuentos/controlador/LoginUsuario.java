@@ -55,25 +55,19 @@ public class LoginUsuario extends HttpServlet {
 		}else {
 			
 			
-			//IMPLEMENTAR VERIFICACION LOGIN
-			/*
-			Query q = em.createQuery("	SELECT correo FROM usuario");
 			
-			List<Object[]> usuarios = q.getResultList();
+			Query q = em.createQuery("SELECT password	FROM Usuario where correo='"+correo+"'");
 			
-			 request.setAttribute("usuarios",usuarios);
+			String passwordTraida = (String) q.getSingleResult();
 			
-				
-			 for (Object[] us : usuarios) {
-		          System.out.println(us);
-		   }
+			 System.out.println(passwordTraida);
 			 
-			System.out.println("\n-----dd------\n----------");
+
 			
 			
 			request.getRequestDispatcher("Index.jsp").forward(request,response);
 
-			*/
+			
 			
 		}
 		
