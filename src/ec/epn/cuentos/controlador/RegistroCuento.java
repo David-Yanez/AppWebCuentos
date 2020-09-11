@@ -63,12 +63,16 @@ public class RegistroCuento extends HttpServlet {
 		String descripcion=request.getParameter("descripcion");
 		//String archivo=request.getParameter("archivo");
 		String id_usuario=request.getParameter("id_usuario");
-		String nomb = request.getParameter("nombre");
+		String nombArch = request.getParameter("nombre");
 		Part archivo = request.getPart("archivo");
+		String nombImg = request.getParameter("nombre2");
+		Part imagen = request.getPart("imagen");
 		
 		InputStream is = archivo.getInputStream();
+		InputStream is2 = imagen.getInputStream();
 		
-		File f = new File ("/home/david/Documentos/Archivo/"+nomb) ;
+		File f = new File ("/home/david/Documentos/Proyecto/Archivos/"+nombArch) ;
+	   File f2 = new File ("/home/david/Documentos/Proyecto/Imagenes/"+nombImg) ;
 	
 		
 		//PrintWriter out=new PrintWriter(os);
@@ -110,6 +114,18 @@ public class RegistroCuento extends HttpServlet {
 		
 		ous.close();
 		is.close();
+		
+		 // lee y guarda el imagen
+		FileOutputStream ous2 = new FileOutputStream(f2);
+		int datos2 = is2.read();
+		while(datos2 != -1) {
+			ous2.write(datos2);
+			datos2 = is2.read();
+		}
+		
+		
+		ous.close();
+		is.close();
 			
 			Cuen.setTipo(tipo);
 		
@@ -117,12 +133,15 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setNombrecu(nombrecu);
 			Cuen.setAutor(autor);
 			Cuen.setDescripcion(descripcion);
-		//	Cuen.setArchivo(archi);
+			Cuen.setArchivo("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
+			Cuen.setImagen("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
+			
+			//	Cuen.setArchivo(archi);
 	
 			Cuen.setId_usuario(us);
 			
 			
-		//	em.persist(Cuen);  
+			em.persist(Cuen);  
 			
 			request.getRequestDispatcher("ListarRegis").forward(request, response);
 		}

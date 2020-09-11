@@ -14,6 +14,8 @@
 
 <script type="text/javascript" src="./CargaArchivo.js"></script>
 
+<script type="text/javascript" src="./CargaImagen.js"></script>
+
 </head>
 <body>
     <%!public String obtieneAtributo(HttpServletRequest request, String nombre){
@@ -135,12 +137,18 @@
       <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
      <div class="custom-file mb-3">
     <input type="file" name="archivo" onchange="cargarArchivo(this)" class="custom-file-input" id="validatedCustomFile"  required/>
-    <label class="custom-file-label" for="validatedCustomFile">carga</label>
+    <label class="custom-file-label" for="validatedCustomFile">Carga el archivo ...</label>
     <div class="invalid-feedback">Falta cargar un Archivo</div>
   </div>
     </div>  
     
-   
+       <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class="custom-file mb-3">
+    <input type="file" name="imagen" onchange="cargarImagen(this)" class="custom-file-input" id="validatedCustomFile"  required/>
+    <label class="custom-file-label" for="validatedCustomFile">Cargar la imagen ...</label>
+    <div class="invalid-feedback">Falta cargar la imagen</div>
+  </div>
+    </div> 
     
     
      <div class="input-group mb-3">
@@ -151,6 +159,8 @@
     </div> 
     
     <input type="hidden" name="nombre" value=""/>
+    <input type="hidden" name="nombre2" value=""/>
+    
     
      <button class="btn btn-primary" name="guardar" type="submit" >Guardar</button>
  
