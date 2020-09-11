@@ -1,17 +1,22 @@
 package ec.epn.cuentos.controlador;
 
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.transaction.Transactional;
 
 import ec.epn.cuentos.modelo.Cuento;
@@ -24,7 +29,7 @@ import ec.epn.cuentos.modelo.Usuario;
 
 
 @Transactional
-
+@MultipartConfig
 @WebServlet("/RegistroCuento")
 public class RegistroCuento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -58,6 +63,13 @@ public class RegistroCuento extends HttpServlet {
 		String descripcion=request.getParameter("descripcion");
 		//String archivo=request.getParameter("archivo");
 		String id_usuario=request.getParameter("id_usuario");
+		String nomb = request.getParameter("nombre");
+		Part archivo = request.getPart("archivo");
+		
+		InputStream is = archivo.getInputStream();
+		
+		File f = new File ("/home/david/Documentos/Archivo/"+nomb) ;
+	
 		
 		//PrintWriter out=new PrintWriter(os);
 
@@ -87,8 +99,20 @@ public class RegistroCuento extends HttpServlet {
 	 Cuento Cuen = new Cuento ();
 	 Usuario us = new Usuario ();
 	 us.setId_usuario(id_us);
+	 
+	 // lee y guarda el archivo
+		FileOutputStream ous = new FileOutputStream(f);
+		int datos = is.read();
+		while(datos != -1) {
+			ous.write(datos);
+			datos = is.read();
+		}
+		
+		ous.close();
+		is.close();
 			
 			Cuen.setTipo(tipo);
+		
 			Cuen.setGenero(genero);
 			Cuen.setNombrecu(nombrecu);
 			Cuen.setAutor(autor);
@@ -98,7 +122,7 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setId_usuario(us);
 			
 			
-			em.persist(Cuen);  
+		//	em.persist(Cuen);  
 			
 			request.getRequestDispatcher("ListarRegis").forward(request, response);
 		}

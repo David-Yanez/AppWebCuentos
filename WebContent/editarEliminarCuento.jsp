@@ -164,10 +164,10 @@
      </form>
      
      
-     <form method="post" action="EliminarCuento">
+ 
     
-      <button class="btn btn-primary" type="submit" ><a href= "EditarCuento?id_cuentos=<%=obtieneAtributo(request, "valId_cuentos")%>">Eliminar</a></button>
-     </form>
+      <a class="btn btn-primary " href= "EliminarCuento?id_cuentos=<%=obtieneAtributo(request, "valId_cuentos")%>"> Eliminar </a>   
+  
      
     
    

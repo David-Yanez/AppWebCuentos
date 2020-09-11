@@ -64,7 +64,8 @@ public class ActualizarCuento extends HttpServlet {
 			} else {
 				
 				Cuento cu = em.find(Cuento.class, idCu);
-				 Usuario us = new Usuario ();
+			//	 Usuario us = new Usuario ();
+				 Usuario us = em.find(Usuario.class,idUs);
 				 us.setId_usuario(idUs);
 				 
 				cu.setTipo(tipo);
