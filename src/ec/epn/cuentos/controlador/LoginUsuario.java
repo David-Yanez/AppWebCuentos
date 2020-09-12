@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
 import ec.epn.cuentos.modelo.Usuario;
@@ -72,7 +73,13 @@ public class LoginUsuario extends HttpServlet {
 				
 				Query q2 = em.createQuery("SELECT id_usuario FROM Usuario where correo='"+correo+"'");
 				String id =String.valueOf(q2.getSingleResult());
-				request.getSession().setAttribute("id_usuario", id);
+				
+				
+				HttpSession misession= request.getSession();
+				misession.setAttribute("id_usuario",id);
+				response.sendRedirect("RegiCuen.jsp");
+				response.sendRedirect("RegiCuen.jsp");
+				
 				
 				request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
 				

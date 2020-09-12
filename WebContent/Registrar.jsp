@@ -24,7 +24,7 @@
 			</li>
 			<li class="nav-item"><a class="nav-link" href="Descargas.jsp">Descargas</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="Login.jsp">Registrar
+			<li class="nav-item"><a class="nav-link" href="RegiCuen.jsp">Registrar
 					Cuento</a></li>
 
 
@@ -66,38 +66,38 @@
 						<td>Nombre:</td>
 
 						<td><input type="text" name="nombre"
-							value="<%=obtieneAtributo(request, "valNombre")%>" /></td>
+							value="<%=obtieneAtributo(request, "valNombre")%>" class="form-control is-valid" required/></td> 
 					</tr>
 					<tr>
 						<td>Apellido:</td>
 						<td><input type="text" name="apellido"
-							value="<%=obtieneAtributo(request, "valApellido")%>" /></td>
+							value="<%=obtieneAtributo(request, "valApellido")%>" class="form-control is-valid" required /></td>
 					</tr>
 					<tr>
 						<td>Sexo <br />
 						</td>
 						<td><input type="radio" name="sexo" value="Hombre" <%=obtieneAtributo(request, "valSexo1")%> /> Hombre
 							<input type="radio" name="sexo" value="Mujer" <%=obtieneAtributo(request, "valSexo2")%>/> Mujer 
-							<input type="radio" name="sexo" value="Otro" <%=obtieneAtributo(request, "valSexo3")%>/> Otro
+							<input type="radio" name="sexo" value="Otro" <%=obtieneAtributo(request, "valSexo3") %>/> Otro
 						</td>
 					</tr>
 					<tr>
 						<td>Fecha nacimiento:</td>
 			           <td>   <input type="date" name="fecha"
-			           			value="<%=obtieneAtributo(request, "valFecha")%>"/>  </td>
+			           			value="<%=obtieneAtributo(request, "valFecha")%>" class="form-control is-valid" required/>  </td>
 					</tr>
 					<tr>
 						<td>Correo electrónico:</td>
 						<td><input type="text" name="correo"
-							value="<%=obtieneAtributo(request, "valCorreo")%>" /></td>
+							value="<%=obtieneAtributo(request, "valCorreo")%>" class="form-control is-valid" required /></td>
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="password1"/></td>
+						<td><input type="password" name="password1" class="form-control is-valid" required/></td>
 					</tr>
 					<tr>
 						<td>Repita la contraseña:</td>
-						<td><input type="password" name="password2"/></td>
+						<td><input type="password" name="password2" class="form-control is-valid" required/></td>
 					</tr>
 					
 					<tr>

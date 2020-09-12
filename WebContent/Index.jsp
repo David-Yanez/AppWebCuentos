@@ -29,6 +29,12 @@
 
 </head>
 <body>
+<%if (request.getParameter("cerrar")!=null){
+				
+			session.invalidate();	
+				
+			}
+%>
 
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2F3A8D;">

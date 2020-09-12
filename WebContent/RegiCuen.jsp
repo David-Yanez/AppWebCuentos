@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page session = "true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +27,26 @@
 	return valor;
 	}	
 %>
+
+ 
+    <%
+    HttpSession sesion = request.getSession();
+    String id=null;
+    
+    if(sesion.getAttribute("id_usuario")!=null){
+    	id=sesion.getAttribute("id_usuario").toString();
+    	out.print("<a href='Index.jsp?cerrar=true'><h5>Cerrar sesion</h5></a>");
+    }else{
+    	
+    	out.print("<script>location.replace('Login.jsp');</script>");
+    }
+    
+    
+    
+     
+    %>
+
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
@@ -150,13 +171,14 @@
   </div>
     </div> 
     
+   
     
      <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
       </div>
 
-      <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      <input type="text" class="form-control" name="id_usuario" value= <%=id %> aria-label="Default" aria-describedby="inputGroup-sizing-default">
 
     </div> 
     
