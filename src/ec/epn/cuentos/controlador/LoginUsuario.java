@@ -56,20 +56,34 @@ public class LoginUsuario extends HttpServlet {
 			
 			
 			Query q = em.createQuery("SELECT password	FROM Usuario where correo='"+correo+"'");
+			boolean existe = q.getResultList().isEmpty();
+
+			if (existe) {
+				
+				request.setAttribute("valError","Usuario no existe");
+				request.getRequestDispatcher("Login.jsp").forward(request,response);
+
+			}else {
+			
 			String passwordTraida = (String) q.getSingleResult();
 			
-			if(passwordTraida.equals(password)){
+			if(password.equals(passwordTraida)){
 				
-				request.getRequestDispatcher("Index.jsp").forward(request,response);
+				
+				Query q2 = em.createQuery("SELECT id_usuario FROM Usuario where correo='"+correo+"'");
+				String id =String.valueOf(q2.getSingleResult());
+				request.getSession().setAttribute("id_usuario", id);
+				
+				request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
 				
 			}else {
-				
-				request.setAttribute("valError","Usuario o contraseña invalidos");
+			
+				request.setAttribute("valError","Contraseña Incorrecta");
 				request.getRequestDispatcher("Login.jsp").forward(request,response);
 
 			}
 			
-			
+			}
 			
 			
 		}

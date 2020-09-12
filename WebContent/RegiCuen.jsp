@@ -141,7 +141,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
       </div>
-      <input type="text" class="form-control" name="id_usuario" value="<%=obtieneAtributo(request, "valId_usuario")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      <input type="text" class="form-control" name="id_usuario" value="<%=obtieneAtributo(request, "id_usuario")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div> 
     
      <button class="btn btn-primary" type="submit" >Guardar</button>

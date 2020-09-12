@@ -24,7 +24,7 @@
 			</li>
 			<li class="nav-item"><a class="nav-link" href="Descargas.jsp">Descargas</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="RegiCuen.jsp">Registrar
+			<li class="nav-item"><a class="nav-link" href="Login.jsp">Registrar
 					Cuento</a></li>
 
 
@@ -76,14 +76,15 @@
 					<tr>
 						<td>Sexo <br />
 						</td>
-						<td><input type="radio" name="sexo" value="Hombre" /> Hombre
-							<input type="radio" name="sexo" value="Mujer" /> Mujer 
-							<input type="radio" name="sexo" value="Otro" /> Otro
+						<td><input type="radio" name="sexo" value="Hombre" <%=obtieneAtributo(request, "valSexo1")%> /> Hombre
+							<input type="radio" name="sexo" value="Mujer" <%=obtieneAtributo(request, "valSexo2")%>/> Mujer 
+							<input type="radio" name="sexo" value="Otro" <%=obtieneAtributo(request, "valSexo3")%>/> Otro
 						</td>
 					</tr>
 					<tr>
 						<td>Fecha nacimiento:</td>
-			           <td>   <input type="date" name="fecha">  </td>
+			           <td>   <input type="date" name="fecha"
+			           			value="<%=obtieneAtributo(request, "valFecha")%>"/>  </td>
 					</tr>
 					<tr>
 						<td>Correo electrónico:</td>
@@ -92,8 +93,11 @@
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="password"
-							value="<%=obtieneAtributo(request, "valPassword")%>" /></td>
+						<td><input type="password" name="password1"/></td>
+					</tr>
+					<tr>
+						<td>Repita la contraseña:</td>
+						<td><input type="password" name="password2"/></td>
 					</tr>
 					
 					<tr>
