@@ -13,6 +13,7 @@ import javax.transaction.Transactional;
 
 //import ec.epn.adm.libros.modelo.Libro;
 import ec.epn.cuentos.modelo.Cuento;
+import ec.epn.cuentos.modelo.Usuario;
 
 /**
  * Servlet implementation class EditarCuento
@@ -40,8 +41,12 @@ public class EditarCuento extends HttpServlet {
 		// TODO Auto-generated method stub
 	//	response.getWriter().append("Served at: ").append(request.getContextPath());
 		String parametro = request.getParameter("id_cuentos");
+	//	String parametro = request.getParameter("id_cuentos");
+		
 		
 		Cuento cu= em.find(Cuento.class, new Integer(parametro));
+		
+	//	int id_us = Integer.parseInt(cu.getId_usuario().getId_usuario());
 		
 		request.setAttribute("valTipo", cu.getTipo());
 		request.setAttribute("valNombreCu", cu.getNombrecu());
@@ -50,7 +55,25 @@ public class EditarCuento extends HttpServlet {
 		request.setAttribute("valDescripcion", cu.getDescripcion());
 		//request.setAttribute("valId_usuario", cu.getId_usuario());
 	//	request.setAttribute("valId_cuentos", cu.getId_cuentos());
-		request.setAttribute("valId_usuario", parametro);
+		
+		/* int numEntero = 4;    
+		    String numCadena= String.valueOf(numEntero);*/
+		 Usuario us = cu.getId_usuario();
+		
+		 String id_uss = String.valueOf( cu.getId_usuario().getId_usuario());
+	//	 
+		// Usuario us = em.find(Usuario.class, cu.getId_usuario());
+		
+		// us.setId_usuario(cu.getId_usuario());
+		 
+	//	String id_us = String.valueOf(us.getId_usuario());*/
+		
+	//	String id_uss = String.valueOf(us.getId_usuario());
+		//String id_uss = String.valueOf(us.setId_usuario(us.getId_usuario());
+		
+	//	String id_us2 = String.copyValueOf(cu.setId_usuario(id_us);
+		
+		request.setAttribute("valId_usuario", id_uss);
 		request.setAttribute("valId_cuentos", parametro);
 		
 		

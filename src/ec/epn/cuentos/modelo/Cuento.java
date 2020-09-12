@@ -26,9 +26,11 @@ public class Cuento {
 	@Column
 	private String descripcion;
 	
-	//@Lob
 	@Column
-	private byte[] archivo ; 
+	private String archivo;
+	
+	@Column
+	private String imagen;
 	
 	@ManyToOne
 	//@Column
@@ -84,13 +86,7 @@ public class Cuento {
 		this.descripcion = descripcion;
 	}
 
-	public byte[] getArchivo() {
-		return archivo;
-	}
-
-	public void setArchivo(byte[] archivo) {
-		this.archivo = archivo;
-	}
+	
 
 	public Usuario getId_usuario() {
 		return id_usuario;
@@ -98,6 +94,22 @@ public class Cuento {
 
 	public void setId_usuario(Usuario id_usuario) {
 		this.id_usuario = id_usuario;
+	}
+
+	public String getArchivo() {
+		return archivo;
+	}
+
+	public void setArchivo(String archivo) {
+		this.archivo = archivo;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 	
 
