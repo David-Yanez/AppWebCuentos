@@ -74,14 +74,29 @@ public class LoginUsuario extends HttpServlet {
 				Query q2 = em.createQuery("SELECT id_usuario FROM Usuario where correo='"+correo+"'");
 				String id =String.valueOf(q2.getSingleResult());
 				
+				Query q3 = em.createQuery("SELECT nombre FROM Usuario where correo='"+correo+"'");
+				String nom =String.valueOf(q3.getSingleResult());
+				
+				Query q4 = em.createQuery("SELECT apellido FROM Usuario where correo='"+correo+"'");
+				String ape =String.valueOf(q4.getSingleResult());
+				
+				
 				
 				HttpSession misession= request.getSession();
 				misession.setAttribute("id_usuario",id);
+				
+				HttpSession misession2= request.getSession();
+				misession2.setAttribute("Nombre",nom);
+				
+				HttpSession misession3= request.getSession();
+				misession3.setAttribute("Apellido",ape);
+				
+				
 				response.sendRedirect("RegiCuen.jsp");
 				
 				
 				
-				request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
+				//request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
 				
 			}else {
 			

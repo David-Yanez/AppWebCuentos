@@ -30,11 +30,17 @@
 
  
     <%
-    HttpSession sesion = request.getSession();
+    HttpSession sesion1 = request.getSession();
     String id=null;
+    String nombre=null;
+    String apellido=null;
     
-    if(sesion.getAttribute("id_usuario")!=null){
-    	id=sesion.getAttribute("id_usuario").toString();
+    if(sesion1.getAttribute("id_usuario")!=null){
+    	id=sesion1.getAttribute("id_usuario").toString();
+    	nombre=sesion1.getAttribute("Nombre").toString();
+    	apellido=sesion1.getAttribute("Apellido").toString();
+
+    	out.print("Bienvenido "+nombre+" "+apellido);
     	out.print("<a href='Index.jsp?cerrar=true'><h5>Cerrar sesion</h5></a>");
     }else{
     	
