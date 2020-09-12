@@ -155,7 +155,9 @@
       <div class="input-group-prepend">
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
       </div>
+
       <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default">
+
     </div> 
     
     <input type="hidden" name="nombre" value=""/>
