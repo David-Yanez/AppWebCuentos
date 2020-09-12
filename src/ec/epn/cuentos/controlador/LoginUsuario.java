@@ -78,7 +78,7 @@ public class LoginUsuario extends HttpServlet {
 				HttpSession misession= request.getSession();
 				misession.setAttribute("id_usuario",id);
 				response.sendRedirect("RegiCuen.jsp");
-				response.sendRedirect("RegiCuen.jsp");
+				
 				
 				
 				request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
