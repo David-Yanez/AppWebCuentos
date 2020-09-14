@@ -156,9 +156,17 @@
      <div class="input-group mb-3">  
       <div class="input-group-prepend">  
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
+<<<<<<< HEAD
       </div>  
       <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
       </div>   
+=======
+      </div>
+
+      <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default">
+
+    </div> 
+>>>>>>> 729e51afc408cc059e0b5b6b7b31e75a4fccb1ef
     
     <input type="hidden" name="nombre" value=""/>
     <input type="hidden" name="nombre2" value=""/>
