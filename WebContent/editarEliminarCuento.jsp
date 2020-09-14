@@ -15,6 +15,10 @@
     type="text/css"
     href="css/estilos.css"
 ></link>
+<script type="text/javascript" src="./EditarArchivo.js"></script>
+
+<script type="text/javascript" src="./EditarImagen.js"></script>
+
 </head>
 <body>
 
@@ -76,14 +80,14 @@
     
  <br>  
  
-    <form method="post" action="ActualizarCuento">
+    <form method="post" action="ActualizarCuento" class="was-validated" name="formu2" enctype="multipart/form-data">
    <div class="row">
       
        
        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
          
-      <select class="custom-select mr-sm-2" name="tipo" value="<%=obtieneAtributo(request, "valTipo")%>">
-        <option selected>Tipo de historia</option>
+      <select class="custom-select mr-sm-2" name="tipo" value="<%=obtieneAtributo(request, "valTipo")%>" required>
+        <option value="">Tipo de historia</option>
         <option  value="Cuento">Cuento</option>
         <option  value="Fabula">Fabula</option>
       </select>
@@ -95,7 +99,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Nombre del Cuento: </span>
       </div>
-      <input type="text" class="form-control" name="nombreCu" value="<%=obtieneAtributo(request, "valNombreCu")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default" class="form-control is-invalid">
+      <input type="text" class="form-control" name="nombreCu" value="<%=obtieneAtributo(request, "valNombreCu")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default" class="form-control is-invalid" required>
     </div> 
  
     </div>
@@ -106,15 +110,15 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Autor: </span>
       </div>
-      <input type="text" class="form-control" name="autor" value="<%=obtieneAtributo(request, "valAutor")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      <input type="text" class="form-control" name="autor" value="<%=obtieneAtributo(request, "valAutor")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
     </div> 
     
     </div>
     
        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
          
-      <select class="custom-select mr-sm-2" name="genero" selected="true"  value="<%=obtieneAtributo(request, "valGenero")%>" >
-        <option selected="true" value="<%=obtieneAtributo(request, "valGenero")%>">Genero</option>
+      <select class="custom-select mr-sm-2" name="genero" selected="true"  value="<%=obtieneAtributo(request, "valGenero")%>" required>
+        <option value="">Genero</option>
         <option value="Clasico">Clasico</option>
         <option value="Misterio">Misterio</option>
         <option value="Terror">Terror</option>
@@ -123,24 +127,40 @@
       </div>   
     
     
-     <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class=" col-xs-12 col-sm-6 col-md-8 col-lg-8">
     
       <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Descripcion: </span>
       </div>
-     <textarea class="form-control" name="descripcion" value ="<%=obtieneAtributo(request, "valDescripcion")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default"><%=obtieneAtributo(request, "valDescripcion")%></textarea>
+     <textarea class="form-control" name="descripcion"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required><%=obtieneAtributo(request, "valDescripcion")%></textarea>
     </div> 
     
     </div>
     
-  <%--     <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
      <div class="custom-file mb-3">
-    <input type="file" name="archivo" value ="<%=obtieneAtributo(request, "valArchivo")%>" class="custom-file-input" id="validatedCustomFile" required>
-    <label class="custom-file-label" for="validatedCustomFile">Elegir Archivo...</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div>
+    <input type="file" name="archivo" onchange="editarArchivo(this)" class="custom-file-input" id="validatedCustomFile"  />
+    <label class="custom-file-label" for="validatedCustomFile">Carga el archivo ...</label>
+    <div class="invalid-feedback">Falta cargar un Archivo</div>
   </div>
-    </div>  --%>
+    </div>  
+    
+       <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class="custom-file mb-3">
+    <input type="file" name="imagen" onchange="editarImagen(this)" class="custom-file-input" id="validatedCustomFile"  />
+    <label class="custom-file-label" for="validatedCustomFile">Cargar la imagen ...</label>
+    <div class="invalid-feedback">Falta cargar la imagen</div>
+  </div>
+  
+       <input type="hidden" name="nombre" value=""/>
+    <input type="hidden" name="nombre2" value=""/>
+    </div> 
+
+
+
+
     
      <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -156,19 +176,28 @@
       <input type="text" class="form-control" name="id_cuentos" value="<%=obtieneAtributo(request, "valId_cuentos")%>" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div> 
     
-     <button class="btn btn-primary" type="submit" >Actualizar</button>
- 
     
+
+    
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+     <button class="btn btn-primary" type="submit" >Actualizar</button>
+   </div>
+ 
+        <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <a class="btn btn-primary " href= "EliminarCuento?id_cuentos=<%=obtieneAtributo(request, "valId_cuentos")%>"> Eliminar </a>   
     </div>
+   
        
      </form>
      
      
+
  
-    
-      <a class="btn btn-primary " href= "EliminarCuento?id_cuentos=<%=obtieneAtributo(request, "valId_cuentos")%>"> Eliminar </a>   
-  
      
+     
+     </div>
+    
     
    
      <div>      

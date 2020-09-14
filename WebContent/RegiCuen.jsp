@@ -82,7 +82,7 @@
        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4" required>
          
       <select class="custom-select mr-sm-2" name="tipo" required>
-        <option selected>Tipo de historia</option>
+        <option value="">Tipo de historia</option>
         <option  value="Cuento">Cuento</option>
         <option  value="Fabula">Fabula</option>
       </select>
@@ -111,25 +111,27 @@
     
     </div>
     
-       <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4"  required>
+       <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4"  >
          
       <select class="custom-select mr-sm-2" name="genero"  required>
-        <option selected>Genero</option>
+      <option value="">Genero</option>     
         <option value="Clasico">Clasico</option>
         <option value="Misterio">Misterio</option>
         <option value="Terror">Terror</option>
         <option value="Aventura">Aventura</option>
-      </select>
-       </div>   
+      </select required>
+       </div >   
     
     
-     <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class=" col-xs-12 col-sm-6 col-md-8 col-lg-8">
     
       <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Descripcion: </span>
       </div>
         <textarea class="form-control" name="descripcion"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required></textarea>
+   <br>
+   <br>
     </div> 
     
     </div>
@@ -151,18 +153,18 @@
     </div> 
     
     
-     <div class="input-group mb-3">
-      <div class="input-group-prepend">
+     <div class="input-group mb-3">  
+      <div class="input-group-prepend">  
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
-      </div>
-      <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div> 
+      </div>  
+      <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
+      </div>   
     
     <input type="hidden" name="nombre" value=""/>
     <input type="hidden" name="nombre2" value=""/>
     
     
-     <button class="btn btn-primary" name="guardar" type="submit" >Guardar</button>
+     <button class="btn btn-primary mx-auto" name="guardar" type="submit" >Guardar</button>
  
    
    
