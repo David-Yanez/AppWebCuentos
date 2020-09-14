@@ -78,8 +78,8 @@ public class RegistroCuento extends HttpServlet {
 		InputStream is = archivo.getInputStream();
 		InputStream is2 = imagen.getInputStream();
 		
-		File f = new File ("/home/david/Documentos/Proyecto/Archivos/"+nombArch) ;
-	   File f2 = new File ("/home/david/Documentos/Proyecto/Imagenes/"+nombImg) ;
+		File f = new File ("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Archivos/"+nombArch) ;
+	   File f2 = new File ("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Imagenes/"+nombImg) ;
 	
 		
 		//PrintWriter out=new PrintWriter(os);
@@ -140,8 +140,8 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setNombrecu(nombrecu);
 			Cuen.setAutor(autor);
 			Cuen.setDescripcion(descripcion);
-			Cuen.setArchivo("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
-			Cuen.setImagen("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
+			Cuen.setArchivo("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Archivos/"+nombArch);
+			Cuen.setImagen("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Imagenes/"+nombImg);
 			
 			//	Cuen.setArchivo(archi);
 	
