@@ -61,7 +61,7 @@
 			
 			
 			<table size="35" ; style="font-family: Arial" border="0">
-				<form method="post" action="RegistroUsuario">
+				<form method="post" action="RegistroUsuario"  class="was-validated" >
 					<tr>
 						<td>Nombre:</td>
 

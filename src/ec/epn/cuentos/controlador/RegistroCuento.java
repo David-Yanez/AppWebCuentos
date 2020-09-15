@@ -55,8 +55,7 @@ public class RegistroCuento extends HttpServlet {
  
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	//	OutputStream os=response.getOutputStream();
-		//response.setContentType("text/html; charset=ISO-8859-1");
+
 		
 		HttpSession misession= (HttpSession) request.getSession();
 				
@@ -65,8 +64,10 @@ public class RegistroCuento extends HttpServlet {
 		String nombrecu=request.getParameter("nombreCu");
 		String autor=request.getParameter("autor");
 		String descripcion=request.getParameter("descripcion");
+
 		//String archivo=request.getParameter("archivo");
 		String id_usuario= request.getParameter("id_usuario");
+
 		String nombArch = request.getParameter("nombre");
 		Part archivo = request.getPart("archivo");
 		String nombImg = request.getParameter("nombre2");
@@ -82,25 +83,15 @@ public class RegistroCuento extends HttpServlet {
 	   File f2 = new File ("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Imagenes/"+nombImg) ;
 	
 		
-		//PrintWriter out=new PrintWriter(os);
+	
 
 	
 		if (tipo.trim().equals("") || nombrecu.trim().equals("") || genero.trim().equals("") || autor.trim().equals("") || descripcion.trim().equals("") || id_usuario.trim().equals("") ) {
 			
-		//	PrintWriter out=new PrintWriter(os);
-			/*out.print("<html>");
-			out.print("<body> ");
-			out.print("alert('User or password incorrect');");
-			out.print("</body>");
-			out.print("</html>");*/
-			/*  out.println("<script type=\"text/javascript\">");
-			   out.println("alert(\"User or password incorrect\");");
-			 //  out.println("location='listaRegistrados.jsp';");
-			   out.println("</script>");*/
-			
+	
 			   request.setAttribute("valError","Datos sin llenar");
 				
-			//	request.getRequestDispatcher("listaRegistrados.jsp").forward(request,response);			
+		
 				request.getRequestDispatcher("ListarRegis").forward(request,response);			
 				
 		
@@ -143,7 +134,7 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setArchivo("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Archivos/"+nombArch);
 			Cuen.setImagen("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Imagenes/"+nombImg);
 			
-			//	Cuen.setArchivo(archi);
+		
 	
 			Cuen.setId_usuario(us);
 			

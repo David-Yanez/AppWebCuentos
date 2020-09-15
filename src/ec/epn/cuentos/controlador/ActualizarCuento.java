@@ -1,14 +1,19 @@
 package ec.epn.cuentos.controlador;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.transaction.Transactional;
 
 import ec.epn.cuentos.modelo.Cuento;
@@ -18,6 +23,7 @@ import ec.epn.cuentos.modelo.Usuario;
  * Servlet implementation class ActualizarCuento
  */
 @Transactional
+@MultipartConfig
 @WebServlet("/ActualizarCuento")
 public class ActualizarCuento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -50,7 +56,22 @@ public class ActualizarCuento extends HttpServlet {
 			String descripcion=request.getParameter("descripcion");
 			//String archivo=request.getParameter("archivo");
 			String id_usuario=request.getParameter("id_usuario");
+			
+			String nombArch = request.getParameter("nombre");
+			Part archivo = request.getPart("archivo");
+			String nombImg = request.getParameter("nombre2");
+			Part imagen = request.getPart("imagen");
+			
 	
+			InputStream is = archivo.getInputStream();
+			InputStream is2 = imagen.getInputStream();
+			
+			
+			File f = new File ("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
+		    File f2 = new File ("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
+			
+			
+			
 			int idCu = Integer.parseInt(id_cuento);
 			int idUs = Integer.parseInt(id_usuario);
 
@@ -63,16 +84,48 @@ public class ActualizarCuento extends HttpServlet {
 					request.getRequestDispatcher("ListarRegis").forward(request,response);			
 			} else {
 				
+			
+				
 				Cuento cu = em.find(Cuento.class, idCu);
 			//	 Usuario us = new Usuario ();
 				 Usuario us = em.find(Usuario.class,idUs);
 				 us.setId_usuario(idUs);
+				 
+				 
+				 
+				 // lee y guarda el archivo
+					FileOutputStream ous = new FileOutputStream(f);
+					int datos = is.read();
+					while(datos != -1) {
+						ous.write(datos);
+						datos = is.read();
+					}
+					
+					ous.close();
+					is.close();
+					
+					 // lee y guarda el imagen
+					FileOutputStream ous2 = new FileOutputStream(f2);
+					int datos2 = is2.read();
+					while(datos2 != -1) {
+						ous2.write(datos2);
+						datos2 = is2.read();
+					}
+					
+					
+					ous.close();
+					is.close();
+						
+				 
 				 
 				cu.setTipo(tipo);
 				cu.setGenero(genero);
 				cu.setNombrecu(nombrecu);
 				cu.setAutor(autor);
 				cu.setDescripcion(descripcion);
+				cu.setArchivo("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
+				cu.setImagen("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
+			
 			//	Cuen.setArchivo(archi);	
 				cu.setId_usuario(us);
 				
