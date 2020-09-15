@@ -45,15 +45,6 @@
 	<div class="container-fluid">
 
 
-
-
-
-
-
-
-
-
-
 		<center>
 			<h1>Registrarse</h1>
 
@@ -65,68 +56,50 @@
 				return valor;
 				}	
 				%>
-
-			<p><%=obtieneAtributo(request, "valError")%></p>
-
+			<p style="color:red"><%= obtieneAtributo(request,"valError") %></p>
+			
+			
+			
 			<table size="35" ; style="font-family: Arial" border="0">
-				<form method="post" action="Cuentos.jsp">
+				<form method="post" action="RegistroUsuario"  class="was-validated" >
 					<tr>
 						<td>Nombre:</td>
 
-						<td><input type="text" name="nombreCaja"
-							value="<%=obtieneAtributo(request, "valNombre")%>" /></td>
+						<td><input type="text" name="nombre"
+							value="<%=obtieneAtributo(request, "valNombre")%>" class="form-control is-valid" required/></td> 
 					</tr>
 					<tr>
 						<td>Apellido:</td>
-						<td><input type="text" name="apellidoCaja"
-							value="<%=obtieneAtributo(request, "valApellido")%>" /></td>
+						<td><input type="text" name="apellido"
+							value="<%=obtieneAtributo(request, "valApellido")%>" class="form-control is-valid" required /></td>
 					</tr>
 					<tr>
 						<td>Sexo <br />
 						</td>
-						<td><input type="radio" name="sexo" value="hombre" /> Hombre
-							<input type="radio" name="sexo" value="mujer" /> Mujer 
-							<input type="radio" name="sexo" value="otro" /> Otro
+						<td><input type="radio" name="sexo" value="Hombre" <%=obtieneAtributo(request, "valSexo1")%> /> Hombre
+							<input type="radio" name="sexo" value="Mujer" <%=obtieneAtributo(request, "valSexo2")%>/> Mujer 
+							<input type="radio" name="sexo" value="Otro" <%=obtieneAtributo(request, "valSexo3") %>/> Otro
 						</td>
 					</tr>
 					<tr>
 						<td>Fecha nacimiento:</td>
-						<td>
-						<select name="dia" id="dia">
-								<option value="01">01</option>
-								<option value="02">02</option>
-								<option value="03">03</option>
-								<option value="04">04</option>
-						</select>
-						<select name="mes" id="mes">
-								<option value="Enero">Enero</option>
-								<option value="Febrero">Febrero</option>
-								<option value="Marzo">Marzo</option>
-								<option value="Abril">Abril</option>
-						</select>
-						<select name="año" id="año">
-								<option value="2020">2020</option>
-								<option value="2019">2019</option>
-								<option value="2018">2018</option>
-								<option value="2017">2017</option>
-						</select>
-						</td>
+			           <td>   <input type="date" name="fecha"
+			           			value="<%=obtieneAtributo(request, "valFecha")%>" class="form-control is-valid" required/>  </td>
 					</tr>
 					<tr>
 						<td>Correo electrónico:</td>
 						<td><input type="text" name="correo"
-							value="<%=obtieneAtributo(request, "valCorreo")%>" /></td>
+							value="<%=obtieneAtributo(request, "valCorreo")%>" class="form-control is-valid" required /></td>
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="pass1"
-							value="<%=obtieneAtributo(request, "valPass1")%>" /></td>
+						<td><input type="password" name="password1" class="form-control is-valid" required/></td>
 					</tr>
 					<tr>
 						<td>Repita la contraseña:</td>
-						<td><input type="password" name="pass2"
-							value="<%=obtieneAtributo(request, "valPass2")%>" /></td>
+						<td><input type="password" name="password2" class="form-control is-valid" required/></td>
 					</tr>
+					
 					<tr>
 					<tr>
 						<td></td>
@@ -141,17 +114,6 @@
 			</table>
 			<a class="nav-link" href="Login.jsp">Ya tiene una cuenta creada.</a>
 		</center>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page session = "true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,8 @@
 
 </head>
 <body>
+
+
 
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -64,21 +67,27 @@
 				return valor;
 				}	
 				%>
-
-			<p><%=obtieneAtributo(request, "valError")%></p>
+				
+			
+			
+			<p style="color:red"><%=obtieneAtributo(request, "valError")%></p>
 
 			<table  size="35" ; style="font-family: Arial" border="0">
-				<form method="post" action="Cuentos.jsp">
+				<form method="post" action="LoginUsuario" class="was-validated">
 					<tr>
-						<td>Usuario:</td>
-
-						<td><input type="text" name="usuario_caja"
-							value="<%=obtieneAtributo(request, "valUsuario")%>" /></td>
+					<div class="form-row">
+    				<div class="col-md-6 mb-3">
+						<td>Correo:</td>
+							 
+						<td><input type="text" name="correo" class="form-control is-valid" required
+							value="<%=obtieneAtributo(request, "valCorreo")%>" /></td>
+					</div>
+					</div>
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="pass"
-							value="<%=obtieneAtributo(request, "valPass")%>" />
+						<td><input type="password" name="password" class="form-control is-valid" required
+							value="<%=obtieneAtributo(request, "valPassword")%>" />
 						</td>
 					</tr>
 					<tr>

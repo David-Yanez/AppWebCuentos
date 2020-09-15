@@ -29,6 +29,12 @@
 
 </head>
 <body>
+<%if (request.getParameter("cerrar")!=null){
+				
+			session.invalidate();	
+				
+			}
+%>
 
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2F3A8D;">
@@ -48,7 +54,7 @@
               <a class="nav-link" href="Descargas.jsp">Descargas</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="RegiCuen.jsp">Registrar Cuento</a>
+              <a class="nav-link" href="ListarRegis">Registrar Cuento</a>
             </li>
           
              
@@ -69,12 +75,14 @@
     </nav>
     <div class="container-fluid">
     
+
     <div>  
+
     
       <div class="slider">
-        <div><img  src="img/cuentosInfantiles.jpg" height="300px" width="1500px" alt="hojas" title="hojas"></div>
-        <div><img  src="img/Cuentos2.png" height="300px" width="1500px" alt="cielo" title="cielo"></div>
-        <div><img  src="img/Cuentos3.png" height="300px" width="1500px" alt="rojo" title="rojo"></div>
+        <div><img  src="img/cuentosInfantiles.jpg" height="400px" width="2000px" alt="hojas" title="hojas"></div>
+        <div><img  src="img/Cuentos2.png" height="400px" width="2000px" alt="cielo" title="cielo"></div>
+        <div><img  src="img/Cuentos3.png" height="400px" width="2000px" alt="rojo" title="rojo"></div>
       </div>
     
     </div>
