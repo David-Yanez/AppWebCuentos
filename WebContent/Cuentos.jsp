@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import= "java.util.List" %>
+<%@ page import= "ec.epn.cuentos.modelo.Cuento" %>  
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,8 +23,7 @@
 </head>
 <body>
 
-
-    <nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
+ <nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
     
         <ul class="navbar-nav mr-auto">
            
@@ -64,11 +66,12 @@
        
          <div class="row">
         
+        
         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/cenicienta.jpg" height="200px" width="200px" alt="Cenicienta" title="Cenicienta">
        </p>
-       <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp title=”Cenicienta”>
+       <a href=https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Archivos/cenicienta.pdf title=”Cenicienta”>
          <h5 class="text-center">Cenicienta</h5></a>
          
          </div>
@@ -77,7 +80,7 @@
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/elgatoconbotas.jpg" height="200px" width="200px" alt="elgatoconbotas" title="elgatoconbotas">
        </p>
-       <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp title=”Elgatoconbotas”>
+       <a href=https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Archivos/elgatoconbotas.pdf title=”Elgatoconbotas”>
          <h5 class="text-center">El gato con botas</h5></a>
          
          </div>
@@ -87,7 +90,7 @@
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/bambi.jpg" height="200px" width="200px" alt="bambi" title="bambi">
        </p>
-       <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp title=”Bambi”>
+       <a href=https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Archivos/bambi.pdf title=”Bambi”>
          <h5 class="text-center">Bambi</h5></a>
          
          </div>
@@ -96,7 +99,7 @@
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/laratitapresumida.jpg" height="200px" width="200px" alt="laratitapresumida" title="laratitapresumida">
        </p>
-       <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp title=”Laratitapresumida”>
+       <a href=https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Archivos/laratitapresumida.pdf title=”Laratitapresumida”>
          <h5 class="text-center">La ratita presumida</h5></a>
          
          </div>
@@ -105,16 +108,17 @@
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/reyleon.jpg" height="200px" width="200px" alt="reyleon" title="reyleon">
        </p>
-       <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp title=”ElReyleon”>
+       <a href=https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Archivos/elreyleon.pdf title=”ElReyleon”>
          <h5 class="text-center">El Rey leon</h5></a>
          
          </div>
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+         
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/101dalmatas.jpg" height="200px" width="200px" alt="101dalmatas" title="101dalmatas">
        </p>
-       <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp title=”101dalmatas”>
+       <a href=https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Archivos/101dalmatas.pdf title=”101dalmatas”>
          <h5 class="text-center">101 dalmatas</h5></a>
          
          </div>
@@ -331,10 +335,10 @@
     
     
     
+        
     
-    
-    
-    </div>
+   </div>
+
 
 </body>
 </html>

@@ -16,6 +16,10 @@
     type="text/css"
     href="css/estilos.css"
 ></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -67,9 +71,19 @@
         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
        <img  src="img/fabulas/elaguilaylaflecha.jpg" height="200px" width="200px" alt="elaguilaylaflecha" title="elaguilaylaflecha">
-       </p>
-         <h5 class="text-center">El aguila y la flecha</h5>
-         
+      </p>
+       
+   <div class="text-center">
+   <a type="button" class="text-center" data-toggle="collapse" data-target="#demo">
+       <div id="demo" class="collapse text-center">
+    Estaba asentada un águila en el pico de un peñasco esperando por la llegada de las liebres. <br/>
+    Mas la vio un cazador, y lanzándole una flecha le atravezó su cuerpo. Viendo el águila entonces <br/>
+    que la flecha estaba construída con plumas de su propia especie exclamó: <br/>
+    -- ¡ Qué tristeza terminar mis días por causa de mis plumas !
+<br/>Más profundo es nuestro dolor cuando nos vencen con nuestras propias armas.
+  </div>
+         <h5 class="text-center">El Aguila y la flecha</h5></a>
+</div>
          </div>
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -138,7 +152,7 @@
          
          </div>
         </div>
-    
+   
     
     
     

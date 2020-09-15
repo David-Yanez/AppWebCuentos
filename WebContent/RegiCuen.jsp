@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>CuentaWeb</title>
 
 <link
     rel="Stylesheet"
@@ -148,9 +148,9 @@
       <select class="custom-select mr-sm-2" name="genero"  required>
       <option value="">Genero</option>     
         <option value="Clasico">Clasico</option>
-        <option value="Misterio">Misterio</option>
-        <option value="Terror">Terror</option>
-        <option value="Aventura">Aventura</option>
+        <option value="Misterio">Comedia</option>
+        <option value="Terror">Misterio</option>
+        <option value="Aventura">Ilustrados</option>
       </select required>
        </div >   
     

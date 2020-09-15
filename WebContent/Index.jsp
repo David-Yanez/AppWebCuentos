@@ -16,7 +16,27 @@
     type="text/css"
     href="css/estilos.css"
 ></link>
-
+<style type="text/css">
+  .boton_1{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    color: #006505;
+    background-color: white;
+    border-radius: 15px;
+    border: 3px double #006505;
+  }
+  .boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+    
+  }
+</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -93,7 +113,7 @@
     
     <div class=" col-xs-12 col-sm-6 col-md-9 col-lg-9">
     
-    <h3 class="text-center" style="color: #ED02F8;"><b>Cuentos infantiles</b></h3>
+    <h3 class="text-center" style="color: #ED02F8;"><b>CUENTOS INFANTILES</b></h3>
     
     <p style="color: #9002F8;">Cuentos infantiles llenos de historias maravillosas con los
      cuales enseñamos a nuestros niños su relación con la vida.</p>
@@ -105,7 +125,7 @@ y preparado todas las historias que encontrarás aquí para que resulte asequibl
  sencillo de entender en los más pequeños y a su vez mantenga la atención y la intriga 
  en los que son algo más mayores, incentivando así el hábito de la lectura desde la infancia.</b>
      </p>
-    <h5 style="color: #ED02F8;"><b>El placer e importancia de la lectura</b></h5>
+    <h5 class="text-center" style="color: #ED02F8;"><b>El placer y la importancia de la lectura</b></h5>
     
     <p style="color: #9002F8;" class="text-justify"><b>Inculcar a los más pequeños el placer de la lectura desde edades tempranas posee una 
     gran importancia si se desean arraigar buenos hábitos. Enseñarles que pueden viajar a mil
@@ -390,12 +410,16 @@ adaptadas a sus edades. Disfruta de los relatos recogidos en los cuentos clásic
        
      </div>
      <div class=" col-xs-12 col-sm-6 col-md-3 col-lg-3">
-     <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp >
-       <h4	class="text-center">Clasicos</h4></a>
-      
-     <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp > <h4>Comedia</h4></a>
-    <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp > <h4>Misterio</h4></a>
-    <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp > <h4>Ilustrados</h4></a>
+     
+     <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp class="boton_1"> Clasicos<br/></a>
+      </b>
+       <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp class="boton_1"> <b>Comedia</b><br/></a>
+     </b>
+    <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp class="boton_1"> Misterio   <br/></a>
+    </b>
+    <a href=http://localhost:8080/AppWebCuentos/Cuentos.jsp class="boton_1"> Ilustrados<br/></a>
+    
+    
         </div>
 
      </div>
