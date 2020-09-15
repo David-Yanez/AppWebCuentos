@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
+import javax.jms.Session;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.ServletException;
@@ -16,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import javax.transaction.Transactional;
 
@@ -55,23 +57,30 @@ public class RegistroCuento extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		
+		HttpSession misession= (HttpSession) request.getSession();
+				
 		String tipo=request.getParameter("tipo");
-	   String genero=request.getParameter("genero");
+	    String genero=request.getParameter("genero");
 		String nombrecu=request.getParameter("nombreCu");
 		String autor=request.getParameter("autor");
 		String descripcion=request.getParameter("descripcion");
-		String id_usuario=request.getParameter("id_usuario");
-	
+
+		//String archivo=request.getParameter("archivo");
+		String id_usuario= request.getParameter("id_usuario");
+
 		String nombArch = request.getParameter("nombre");
 		Part archivo = request.getPart("archivo");
 		String nombImg = request.getParameter("nombre2");
 		Part imagen = request.getPart("imagen");
 		
+		System.out.println(id_usuario);
+		misession.setAttribute("valId",id_usuario);
+		
 		InputStream is = archivo.getInputStream();
 		InputStream is2 = imagen.getInputStream();
 		
-		File f = new File ("/home/david/Documentos/Proyecto/Archivos/"+nombArch) ;
-	   File f2 = new File ("/home/david/Documentos/Proyecto/Imagenes/"+nombImg) ;
+		File f = new File ("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Archivos/"+nombArch) ;
+	   File f2 = new File ("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Imagenes/"+nombImg) ;
 	
 		
 	
@@ -122,8 +131,8 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setNombrecu(nombrecu);
 			Cuen.setAutor(autor);
 			Cuen.setDescripcion(descripcion);
-			Cuen.setArchivo("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
-			Cuen.setImagen("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
+			Cuen.setArchivo("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Archivos/"+nombArch);
+			Cuen.setImagen("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Imagenes/"+nombImg);
 			
 		
 	
