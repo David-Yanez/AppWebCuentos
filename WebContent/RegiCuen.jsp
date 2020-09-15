@@ -12,6 +12,11 @@
     type="text/css"
     href="css/bootstrap.min.css"
 ></link>
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
+></link>
 
 <script type="text/javascript" src="./CargaArchivo.js"></script>
 
@@ -54,7 +59,7 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
     
         <ul class="navbar-nav mr-auto">
            
@@ -184,17 +189,17 @@
      <div class="input-group mb-3">  
       <div class="input-group-prepend">  
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
-<<<<<<< HEAD
+
       </div>  
       <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
       </div>   
-=======
+
       </div>
 
       <input type="text" class="form-control" name="id_usuario" value= <%=id %> aria-label="Default" aria-describedby="inputGroup-sizing-default">
 
     </div> 
->>>>>>> 729e51afc408cc059e0b5b6b7b31e75a4fccb1ef
+
     
     <input type="hidden" name="nombre" value=""/>
     <input type="hidden" name="nombre2" value=""/>

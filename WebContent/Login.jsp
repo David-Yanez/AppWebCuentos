@@ -7,7 +7,16 @@
 <meta charset="UTF-8">
 <title>Inicio sesión</title>
 
-<link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
+<link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/bootstrap.min.css"
+></link>
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
+></link>
 
 </head>
 <body>
@@ -15,7 +24,7 @@
 
 
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
 
 		<ul class="navbar-nav mr-auto">
 
