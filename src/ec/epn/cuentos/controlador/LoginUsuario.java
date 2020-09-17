@@ -80,6 +80,12 @@ public class LoginUsuario extends HttpServlet {
 				Query q4 = em.createQuery("SELECT apellido FROM Usuario where correo='"+correo+"'");
 				String ape =String.valueOf(q4.getSingleResult());
 				
+				Query q5 = em.createQuery("SELECT sexo FROM Usuario where correo='"+correo+"'");
+				String sexo =String.valueOf(q5.getSingleResult());
+				
+				Query q6 = em.createQuery("SELECT fechanac FROM Usuario where correo='"+correo+"'");
+				String fecha =String.valueOf(q6.getSingleResult());
+				
 				
 				
 				HttpSession misession= request.getSession();
@@ -91,6 +97,15 @@ public class LoginUsuario extends HttpServlet {
 				HttpSession misession3= request.getSession();
 				misession3.setAttribute("Apellido",ape);
 				
+				HttpSession misession4= request.getSession();
+				misession4.setAttribute("Sexo",sexo);
+				
+				HttpSession misession5= request.getSession();
+				misession5.setAttribute("Fecha",fecha);
+				
+				HttpSession misession6= request.getSession();
+				misession6.setAttribute("Correo",correo);
+					
 				
 				response.sendRedirect("RegiCuen.jsp");
 				
