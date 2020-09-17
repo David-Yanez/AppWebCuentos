@@ -110,7 +110,6 @@ public class LoginUsuario extends HttpServlet {
 				response.sendRedirect("RegiCuen.jsp");
 				
 				
-				
 				//request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
 				
 			}else {
