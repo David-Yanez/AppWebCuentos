@@ -79,15 +79,15 @@
     				<div class="col-md-6 mb-3">
 						<td>Correo:</td>
 							 
-						<td><input type="text" name="correo" class="form-control is-valid" required
-							value="<%=obtieneAtributo(request, "valCorreo")%>" /></td>
+						<td><input type="text" name="correo" class="form-control is-valid" 
+						value="<%=obtieneAtributo(request, "valCorreo")%>"	 required/></td>
 					</div>
 					</div>
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
-						<td><input type="password" name="password" class="form-control is-valid" required
-							value="<%=obtieneAtributo(request, "valPassword")%>" />
+						<td><input type="password" name="password" class="form-control is-valid" 
+							value="<%=obtieneAtributo(request, "valPassword")%>" required/>
 						</td>
 					</tr>
 					<tr>
