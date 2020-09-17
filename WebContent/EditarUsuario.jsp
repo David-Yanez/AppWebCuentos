@@ -130,13 +130,14 @@
 						<td></td>
 					</tr>
 					<td></td>
-					<td><input type="submit" value="Registrar"
+					<td><input type="submit" value="Editar"
 						style='width: 110px; height: 40px'></td>
 					</tr>
 					<br>
 				</form>
 			</table>
-			<a class="nav-link" href="Login.jsp">Ya tiene una cuenta creada.</a>
+			<a class="nav-link" href="EliminarUsuario.jsp?id=<%= request.getParameter("id") %>">Eliminar cuenta permanentemente.</a>
+			
 		</center>
 
 
