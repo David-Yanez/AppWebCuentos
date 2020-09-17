@@ -39,13 +39,21 @@
     String id=null;
     String nombre=null;
     String apellido=null;
+    String sexo=null;
+    String fecha=null;
+    String correo=null;
+
     
     if(sesion1.getAttribute("id_usuario")!=null){
     	id=sesion1.getAttribute("id_usuario").toString();
     	nombre=sesion1.getAttribute("Nombre").toString();
     	apellido=sesion1.getAttribute("Apellido").toString();
+    	sexo=sesion1.getAttribute("Sexo").toString();
+    	fecha=sesion1.getAttribute("Fecha").toString();
+    	correo=sesion1.getAttribute("Correo").toString();
 
-    	out.print("Bienvenido "+nombre+" "+apellido);
+
+    	out.print("<a href='EditarUsuario.jsp?id="+id+"&nombre="+nombre+"&apellido="+apellido+"&sexo="+sexo+"&fecha="+fecha+"&correo="+correo+"'><h5>Bienvenido "+nombre+" "+apellido+"</h5></a>");
     	out.print("<a href='Index.jsp?cerrar=true'><h5>Cerrar sesion</h5></a>");
     }else{
     	
