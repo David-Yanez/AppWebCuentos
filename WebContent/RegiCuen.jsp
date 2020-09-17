@@ -5,12 +5,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>CuentaWeb</title>
 
 <link
     rel="Stylesheet"
     type="text/css"
     href="css/bootstrap.min.css"
+></link>
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
 ></link>
 
 <script type="text/javascript" src="./CargaArchivo.js"></script>
@@ -34,13 +39,21 @@
     String id=null;
     String nombre=null;
     String apellido=null;
+    String sexo=null;
+    String fecha=null;
+    String correo=null;
+
     
     if(sesion1.getAttribute("id_usuario")!=null){
     	id=sesion1.getAttribute("id_usuario").toString();
     	nombre=sesion1.getAttribute("Nombre").toString();
     	apellido=sesion1.getAttribute("Apellido").toString();
+    	sexo=sesion1.getAttribute("Sexo").toString();
+    	fecha=sesion1.getAttribute("Fecha").toString();
+    	correo=sesion1.getAttribute("Correo").toString();
 
-    	out.print("Bienvenido "+nombre+" "+apellido);
+
+    	out.print("<a href='EditarUsuario.jsp?id="+id+"&nombre="+nombre+"&apellido="+apellido+"&sexo="+sexo+"&fecha="+fecha+"&correo="+correo+"'><h5>Bienvenido "+nombre+" "+apellido+"</h5></a>");
     	out.print("<a href='Index.jsp?cerrar=true'><h5>Cerrar sesion</h5></a>");
     }else{
     	
@@ -54,7 +67,7 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
     
         <ul class="navbar-nav mr-auto">
            
@@ -143,9 +156,9 @@
       <select class="custom-select mr-sm-2" name="genero"  required>
       <option value="">Genero</option>     
         <option value="Clasico">Clasico</option>
-        <option value="Misterio">Misterio</option>
-        <option value="Terror">Terror</option>
-        <option value="Aventura">Aventura</option>
+        <option value="Misterio">Comedia</option>
+        <option value="Terror">Misterio</option>
+        <option value="Aventura">Ilustrados</option>
       </select required>
        </div >   
     
@@ -184,17 +197,17 @@
      <div class="input-group mb-3">  
       <div class="input-group-prepend">  
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
-<<<<<<< HEAD
+
       </div>  
       <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
       </div>   
-=======
+
       </div>
 
       <input type="text" class="form-control" name="id_usuario" value= <%=id %> aria-label="Default" aria-describedby="inputGroup-sizing-default">
 
     </div> 
->>>>>>> 729e51afc408cc059e0b5b6b7b31e75a4fccb1ef
+
     
     <input type="hidden" name="nombre" value=""/>
     <input type="hidden" name="nombre2" value=""/>
