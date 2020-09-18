@@ -33,7 +33,7 @@
               <a class="nav-link" href="Index.jsp">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Cuentos.jsp">Cuentos</a>
+              <a class="nav-link" href="ListarCuentos">Cuentos</a>
             </li>
              <li class="nav-item">
               <a class="nav-link" href="Fabulas.jsp">Fábulas</a>

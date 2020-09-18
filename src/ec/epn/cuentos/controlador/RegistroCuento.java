@@ -79,8 +79,8 @@ public class RegistroCuento extends HttpServlet {
 		InputStream is = archivo.getInputStream();
 		InputStream is2 = imagen.getInputStream();
 		
-		File f = new File ("C:/Users/daila/Documents/proyecto libres/Archivos/"+nombArch) ;
-	   File f2 = new File ("C:/Users/daila/Documents/proyecto libres/Imagenes/"+nombImg) ;
+		File f = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/pdf/"+nombArch) ;
+	   File f2 = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/img/"+nombImg) ;
 	
 		
 	
@@ -96,6 +96,7 @@ public class RegistroCuento extends HttpServlet {
 				
 		
 		}else {
+			
 			int id_us = Integer.parseInt(id_usuario);
 			
 	 Cuento Cuen = new Cuento ();
@@ -131,15 +132,14 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setNombrecu(nombrecu);
 			Cuen.setAutor(autor);
 			Cuen.setDescripcion(descripcion);
-			Cuen.setArchivo("C:/Users/daila/Documents/proyecto libres/Archivos/"+nombArch);
-			Cuen.setImagen("C:/Users/daila/Documents/proyecto libres/Imagenes/"+nombImg);
+			Cuen.setId_usuario(us);
+			Cuen.setArchivo("pdf/"+nombArch);
+			Cuen.setImagen("img/"+nombImg);
+		
+			em.persist(Cuen);  
 			
 		
 	
-			Cuen.setId_usuario(us);
-			
-			
-			em.persist(Cuen);  
 			
 			request.getRequestDispatcher("ListarRegis").forward(request, response);
 		}
