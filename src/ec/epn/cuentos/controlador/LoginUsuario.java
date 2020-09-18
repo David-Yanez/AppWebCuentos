@@ -114,7 +114,7 @@ public class LoginUsuario extends HttpServlet {
 				
 			}else {
 			
-				request.setAttribute("valError","Contraseña Incorrecta");
+				request.setAttribute("valError","ContraseÃ±a Incorrecta");
 				request.getRequestDispatcher("Login.jsp").forward(request,response);
 
 			}

@@ -75,7 +75,7 @@
               <a class="nav-link" href="Index.jsp">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Cuentos.jsp">Cuentos</a>
+              <a class="nav-link" href="ListarCuentos">Cuentos</a>
             </li>
              <li class="nav-item">
               <a class="nav-link" href="Fabulas.jsp">Fábulas</a>
@@ -199,29 +199,25 @@
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
 
       </div>  
-      <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
+      <input type="text" class="form-control" name="id_usuario" value=<%=id %>  aria-label="Default" aria-describedby="inputGroup-sizing-default">
       </div>   
 
       </div>
 
-      <input type="text" class="form-control" name="id_usuario" value= <%=id %> aria-label="Default" aria-describedby="inputGroup-sizing-default">
-
+    
     </div> 
 
     
     <input type="hidden" name="nombre" value=""/>
     <input type="hidden" name="nombre2" value=""/>
     
-    
      <button class="btn btn-primary mx-auto" name="guardar" type="submit" >Guardar</button>
  
-   
+        </form>
    
     </div>
        
-     </form>
-     
-    
+
      
      <div>      
 		 <p style="color:red"><%= obtieneAtributo(request,"valError") %></p>

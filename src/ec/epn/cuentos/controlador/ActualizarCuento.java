@@ -58,17 +58,17 @@ public class ActualizarCuento extends HttpServlet {
 			String id_usuario=request.getParameter("id_usuario");
 			
 			String nombArch = request.getParameter("nombre");
-			Part archivo = request.getPart("archivo");
+			Part archivo = request.getPart("archivo2");
 			String nombImg = request.getParameter("nombre2");
-			Part imagen = request.getPart("imagen");
+			Part imagen = request.getPart("imagen2");
 			
 	
 			InputStream is = archivo.getInputStream();
 			InputStream is2 = imagen.getInputStream();
 			
 			
-			File f = new File ("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
-		    File f2 = new File ("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
+			File f = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/pdf/"+nombArch);
+		    File f2 = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/img/"+nombImg);
 			
 			
 			
@@ -92,30 +92,7 @@ public class ActualizarCuento extends HttpServlet {
 				 us.setId_usuario(idUs);
 				 
 				 
-				 
-				 // lee y guarda el archivo
-					FileOutputStream ous = new FileOutputStream(f);
-					int datos = is.read();
-					while(datos != -1) {
-						ous.write(datos);
-						datos = is.read();
-					}
-					
-					ous.close();
-					is.close();
-					
-					 // lee y guarda el imagen
-					FileOutputStream ous2 = new FileOutputStream(f2);
-					int datos2 = is2.read();
-					while(datos2 != -1) {
-						ous2.write(datos2);
-						datos2 = is2.read();
-					}
-					
-					
-					ous.close();
-					is.close();
-						
+			
 				 
 				 
 				cu.setTipo(tipo);
@@ -123,14 +100,52 @@ public class ActualizarCuento extends HttpServlet {
 				cu.setNombrecu(nombrecu);
 				cu.setAutor(autor);
 				cu.setDescripcion(descripcion);
-				cu.setArchivo("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
-				cu.setImagen("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
-			
+					
+							
 			//	Cuen.setArchivo(archi);	
 				cu.setId_usuario(us);
 				
 				
-				em.persist(cu);  
+				if (nombArch.trim().equals("") && nombImg.trim().equals("") ) {
+					
+					em.persist(cu);  
+					
+				} else {
+					
+					 
+					 // lee y guarda el archivo
+						FileOutputStream ous = new FileOutputStream(f);
+						int datos = is.read();
+						while(datos != -1) {
+							ous.write(datos);
+							datos = is.read();
+						}
+						
+						ous.close();
+						is.close();
+						
+						 // lee y guarda el imagen
+						FileOutputStream ous2 = new FileOutputStream(f2);
+						int datos2 = is2.read();
+						while(datos2 != -1) {
+							ous2.write(datos2);
+							datos2 = is2.read();
+						}
+						
+						
+						ous.close();
+						is.close();
+							
+					
+					
+					cu.setArchivo("pdf/"+nombArch);
+					cu.setImagen("img/"+nombImg);
+					em.persist(cu);  
+				}
+				
+				
+				
+				
 				
 				request.getRequestDispatcher("ListarRegis").forward(request, response);
 
