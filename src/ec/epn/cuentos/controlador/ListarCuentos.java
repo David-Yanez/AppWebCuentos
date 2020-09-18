@@ -34,9 +34,15 @@ public class ListarCuentos extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+    /**
+     * Este metodo nos permite crear un objeto personalizado 
+     * con los datos requeridos de todos los cuentos registrados 
+     * @param constulta el nombre , la imagen , el archivo y descripcion del cuento 
+     * @return  crea la lista de objetos personalizados y envia a la jsp Cuentos
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	//	response.getWriter().append("Served at: ").append(request.getContextPath());
+	
 	
 	Query q = em.createQuery("SELECT nombrecu, imagen, archivo, descripcion FROM Cuento");
 	

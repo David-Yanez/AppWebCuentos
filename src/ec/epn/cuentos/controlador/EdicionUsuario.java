@@ -18,6 +18,26 @@ import ec.epn.cuentos.modelo.Usuario;
 /**
  * Servlet implementation class EdicionUsuario
  */
+
+/**
+*   Copyright (c) 2020, David YÃ¡nez, Jersson Andrango, Brandon Toapanta .
+* 
+*   
+*  CuentaWeb is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  CuentaWeb is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
 @Transactional
 @WebServlet("/EdicionUsuario")
 public class EdicionUsuario extends HttpServlet {
@@ -57,7 +77,7 @@ public class EdicionUsuario extends HttpServlet {
 		
 		if(!passVerdadera.equals(password)) {
 			
-			request.setAttribute("valError","Contraseña no coincider");
+			request.setAttribute("valError","Contraseï¿½a no coincider");
 			request.getRequestDispatcher("EditarUsuario.jsp?id="+id+"&nombre="+nombre+"&apellido="+apellido+"&sexo="+sexo+"&fecha="+fechaN+"&correo="+correo).forward(request,response);
 			
 		}else {

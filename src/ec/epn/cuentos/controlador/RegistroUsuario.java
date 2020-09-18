@@ -20,6 +20,26 @@ import ec.epn.cuentos.modelo.Usuario;
 /**
  * Servlet implementation class RegistroUsuario
  */
+
+/**
+*   Copyright (c) 2020, David YÃ¡nez, Jersson Andrango, Brandon Toapanta .
+* 
+*   
+*  CuentaWeb is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  CuentaWeb is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
 @Transactional
 @WebServlet("/RegistroUsuario")
 public class RegistroUsuario extends HttpServlet {
@@ -140,7 +160,7 @@ public class RegistroUsuario extends HttpServlet {
 				request.setAttribute("valCorreo",correo);
 
 				
-				request.setAttribute("valError","Contraseñas no coinciden");
+				request.setAttribute("valError","Contraseï¿½as no coinciden");
 				request.getRequestDispatcher("Registrar.jsp").forward(request,response);
 				
 			}else {

@@ -43,9 +43,15 @@ public class ActualizarCuento extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+    /**
+     * Este metodo nos permite actualizar los datos de un cuento previamente regitrado
+     * @param recibe los parametros que se van actualizar 
+     * @return Registra los nuevos datos en la base de datos 
+     */
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	//	response.getWriter().append("Served at: ").append(request.getContextPath());
+	
 		
 		String id_cuento = request.getParameter("id_cuentos");
 		  

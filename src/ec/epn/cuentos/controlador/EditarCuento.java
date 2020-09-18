@@ -18,6 +18,26 @@ import ec.epn.cuentos.modelo.Usuario;
 /**
  * Servlet implementation class EditarCuento
  */
+
+/**
+*   Copyright (c) 2020, David Yánez, Jersson Andrango, Brandon Toapanta .
+* 
+*   
+*  CuentaWeb is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  CuentaWeb is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
 @Transactional
 @WebServlet("/EditarCuento")
 public class EditarCuento extends HttpServlet {
@@ -37,6 +57,13 @@ public class EditarCuento extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+    /**
+     * Este metodo nos permite consultar los datos de un cuento para 
+     * cargar en la jsp editar eliminar cuento 
+     * @param recibe el id del cuento
+     * @return envia  todos los datos del cuento al jsp editarEliminarCuento
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	//	response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -53,26 +80,11 @@ public class EditarCuento extends HttpServlet {
 		request.setAttribute("valAutor", cu.getAutor());
 		request.setAttribute("valGenero", cu.getGenero());
 		request.setAttribute("valDescripcion", cu.getDescripcion());
-		//request.setAttribute("valId_usuario", cu.getId_usuario());
-	//	request.setAttribute("valId_cuentos", cu.getId_cuentos());
-		
-		/* int numEntero = 4;    
-		    String numCadena= String.valueOf(numEntero);*/
-		 Usuario us = cu.getId_usuario();
+	
+	//	 Usuario us = cu.getId_usuario();
 		
 		 String id_uss = String.valueOf( cu.getId_usuario().getId_usuario());
-	//	 
-		// Usuario us = em.find(Usuario.class, cu.getId_usuario());
-		
-		// us.setId_usuario(cu.getId_usuario());
-		 
-	//	String id_us = String.valueOf(us.getId_usuario());*/
-		
-	//	String id_uss = String.valueOf(us.getId_usuario());
-		//String id_uss = String.valueOf(us.setId_usuario(us.getId_usuario());
-		
-	//	String id_us2 = String.copyValueOf(cu.setId_usuario(id_us);
-		
+
 		request.setAttribute("valId_usuario", id_uss);
 		request.setAttribute("valId_cuentos", parametro);
 		
