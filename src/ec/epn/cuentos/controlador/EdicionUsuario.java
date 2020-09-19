@@ -56,6 +56,13 @@ public class EdicionUsuario extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+    
+    /**
+     * Este metodo nos permite Editar un usario.
+     * @param Recibe los datos del usuario y los muestra en la jsp .
+     * @return  Una vez validado todo actualiza los datos de usuario en la base de datos y nos envía al Index.jsp.
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = (String) request.getParameter("id");
 		String nombre = request.getParameter("nombre");
@@ -101,13 +108,6 @@ public class EdicionUsuario extends HttpServlet {
 			
 			
 		}
-		
-		
-		
-		
-		
-		
-		
 		
 	
 	}
