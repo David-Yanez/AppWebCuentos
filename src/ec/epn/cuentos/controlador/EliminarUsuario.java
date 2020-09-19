@@ -15,6 +15,25 @@ import ec.epn.cuentos.modelo.Cuento;
 import ec.epn.cuentos.modelo.Usuario;
 
 /**
+*   Copyright (c) 2020, David Yánez, Jersson Andrango, Brandon Toapanta .
+* 
+*   
+*  CuentaWeb is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  CuentaWeb is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
+/**
  * Servlet implementation class EliminarUsuario
  */
 @Transactional
@@ -27,12 +46,17 @@ public class EliminarUsuario extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
+	
     public EliminarUsuario() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	
+    /**
+     * Este metodo nos permite eliminar usuarios.
+     * @param recibe el id del usuario a eliminar. 
+     * @return  elimina al usuario permanentemente de la base de datos y nos regresa al Index.jsp
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		String id = request.getParameter("id");

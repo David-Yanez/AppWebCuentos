@@ -44,7 +44,13 @@
     String correo=null;
 
     
-    if(sesion1.getAttribute("id_usuario")!=null){
+    if(sesion1.getAttribute("id_usuario")!=null&&
+    		sesion1.getAttribute("Nombre")!=null&&
+    		sesion1.getAttribute("Apellido")!=null&&
+    		sesion1.getAttribute("Sexo")!=null&&
+    		sesion1.getAttribute("Fecha")!=null&&
+    		sesion1.getAttribute("Correo")!=null){
+    	
     	id=sesion1.getAttribute("id_usuario").toString();
     	nombre=sesion1.getAttribute("Nombre").toString();
     	apellido=sesion1.getAttribute("Apellido").toString();

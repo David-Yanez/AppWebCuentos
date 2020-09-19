@@ -59,6 +59,12 @@ public class RegistroUsuario extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+    /**
+     * Este método nos permite crear un nuevo usuario.
+     * @param recibe los datos del usuario, no debe repetirse el correo, todos los datos deben estar llenos. 
+     * @return  registra al usuario con todos sus datos en la base de datos y nos envía al registrar cuento.
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String nombre = request.getParameter("nombre");
@@ -160,7 +166,7 @@ public class RegistroUsuario extends HttpServlet {
 				request.setAttribute("valCorreo",correo);
 
 				
-				request.setAttribute("valError","Contrase�as no coinciden");
+				request.setAttribute("valError","Contraseñas no coinciden");
 				request.getRequestDispatcher("Registrar.jsp").forward(request,response);
 				
 			}else {

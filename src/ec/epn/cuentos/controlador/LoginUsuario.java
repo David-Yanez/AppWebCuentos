@@ -60,6 +60,13 @@ public class LoginUsuario extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+    
+    /**
+     * Este metodo nos permite ingresar a la página con nuestras licencias.
+     * @param recibe los datos del usuario y estos deben ser correctos.
+     * @return  Ingresa a la página de registrar cuento con variables de sesión.
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String correo = request.getParameter("correo");
