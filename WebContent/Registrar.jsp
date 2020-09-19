@@ -6,19 +6,28 @@
 <meta charset="UTF-8">
 <title>Registrarse</title>
 
-<link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
+<link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/bootstrap.min.css"
+></link>
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
+></link>
 
 </head>
 <body>
 
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
 
 		<ul class="navbar-nav mr-auto">
 
 			<li class="nav-item"><a class="nav-link" href="Index.jsp">Inicio</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="Cuentos.jsp">Cuentos</a>
+			<li class="nav-item"><a class="nav-link" href="ListarCuentos">Cuentos</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="Fabulas.jsp">Fábulas</a>
 			</li>

@@ -5,13 +5,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>CuentaWeb</title>
 
 <link
     rel="Stylesheet"
     type="text/css"
     href="css/bootstrap.min.css"
 ></link>
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
+></link>
+
+<script type="text/javascript" src="./CargaArchivo.js"></script>
+
+<script type="text/javascript" src="./CargaImagen.js"></script>
 
 <script type="text/javascript" src="./CargaArchivo.js"></script>
 
@@ -34,13 +43,29 @@
     String id=null;
     String nombre=null;
     String apellido=null;
+<<<<<<< HEAD
+=======
+    String sexo=null;
+    String fecha=null;
+    String correo=null;
+
+>>>>>>> master
     
     if(sesion1.getAttribute("id_usuario")!=null){
     	id=sesion1.getAttribute("id_usuario").toString();
     	nombre=sesion1.getAttribute("Nombre").toString();
     	apellido=sesion1.getAttribute("Apellido").toString();
+<<<<<<< HEAD
 
     	out.print("Bienvenido "+nombre+" "+apellido);
+=======
+    	sexo=sesion1.getAttribute("Sexo").toString();
+    	fecha=sesion1.getAttribute("Fecha").toString();
+    	correo=sesion1.getAttribute("Correo").toString();
+
+
+    	out.print("<a href='EditarUsuario.jsp?id="+id+"&nombre="+nombre+"&apellido="+apellido+"&sexo="+sexo+"&fecha="+fecha+"&correo="+correo+"'><h5>Bienvenido "+nombre+" "+apellido+"</h5></a>");
+>>>>>>> master
     	out.print("<a href='Index.jsp?cerrar=true'><h5>Cerrar sesion</h5></a>");
     }else{
     	
@@ -51,10 +76,14 @@
     
      
     %>
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
     
         <ul class="navbar-nav mr-auto">
            
@@ -62,7 +91,7 @@
               <a class="nav-link" href="Index.jsp">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Cuentos.jsp">Cuentos</a>
+              <a class="nav-link" href="ListarCuentos">Cuentos</a>
             </li>
              <li class="nav-item">
               <a class="nav-link" href="Fabulas.jsp">Fábulas</a>
@@ -143,9 +172,15 @@
       <select class="custom-select mr-sm-2" name="genero"  required>
       <option value="">Genero</option>     
         <option value="Clasico">Clasico</option>
+<<<<<<< HEAD
         <option value="Misterio">Misterio</option>
         <option value="Terror">Terror</option>
         <option value="Aventura">Aventura</option>
+=======
+        <option value="Misterio">Comedia</option>
+        <option value="Terror">Misterio</option>
+        <option value="Aventura">Ilustrados</option>
+>>>>>>> master
       </select required>
        </div >   
     
@@ -185,6 +220,7 @@
       <div class="input-group-prepend">  
         <span class="input-group-text"  id="inputGroup-sizing-default">Id_Usuario: </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>  
       <input type="text" class="form-control" name="id_usuario"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
       </div>   
@@ -209,6 +245,29 @@
      </form>
      
     
+=======
+
+      </div>  
+      <input type="text" class="form-control" name="id_usuario" value=<%=id %>  aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div>   
+
+      </div>
+
+    
+    </div> 
+
+    
+    <input type="hidden" name="nombre" value=""/>
+    <input type="hidden" name="nombre2" value=""/>
+    
+     <button class="btn btn-primary mx-auto" name="guardar" type="submit" >Guardar</button>
+ 
+        </form>
+   
+    </div>
+       
+
+>>>>>>> master
      
      <div>      
 		 <p style="color:red"><%= obtieneAtributo(request,"valError") %></p>

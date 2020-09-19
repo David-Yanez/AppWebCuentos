@@ -5,6 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<<<<<<< HEAD
+=======
+
+<script type="text/javascript" src="./ActualizarArchivo.js"></script>
+<script type="text/javascript" src="./ActualizarImagen.js"></script>
+
+>>>>>>> master
 <link
     rel="Stylesheet"
     type="text/css"
@@ -15,9 +22,14 @@
     type="text/css"
     href="css/estilos.css"
 ></link>
+<<<<<<< HEAD
 <script type="text/javascript" src="./EditarArchivo.js"></script>
 
 <script type="text/javascript" src="./EditarImagen.js"></script>
+=======
+
+
+>>>>>>> master
 
 </head>
 <body>
@@ -141,7 +153,11 @@
 
     <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
      <div class="custom-file mb-3">
+<<<<<<< HEAD
     <input type="file" name="archivo" onchange="editarArchivo(this)" class="custom-file-input" id="validatedCustomFile"  />
+=======
+    <input type="file" name="archivo2" onchange="editarArchivo(this)" class="custom-file-input" id="validatedCustomFile"  />
+>>>>>>> master
     <label class="custom-file-label" for="validatedCustomFile">Carga el archivo ...</label>
     <div class="invalid-feedback">Falta cargar un Archivo</div>
   </div>
@@ -149,16 +165,28 @@
     
        <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
      <div class="custom-file mb-3">
+<<<<<<< HEAD
     <input type="file" name="imagen" onchange="editarImagen(this)" class="custom-file-input" id="validatedCustomFile"  />
+=======
+    <input type="file"  name="imagen2" onchange="editarImagen(this)" class="custom-file-input" id="validatedCustomFile"  />
+>>>>>>> master
     <label class="custom-file-label" for="validatedCustomFile">Cargar la imagen ...</label>
     <div class="invalid-feedback">Falta cargar la imagen</div>
   </div>
   
+<<<<<<< HEAD
        <input type="hidden" name="nombre" value=""/>
     <input type="hidden" name="nombre2" value=""/>
     </div> 
 
 
+=======
+
+    </div> 
+
+       <input type="hidden" name="nombre" value=""/>
+       <input type="hidden" name="nombre2" value=""/>
+>>>>>>> master
 
 
     
@@ -189,7 +217,11 @@
     </div>
    
        
+<<<<<<< HEAD
      </form>
+=======
+    </form>   
+>>>>>>> master
      
      
 

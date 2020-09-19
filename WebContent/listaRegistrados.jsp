@@ -8,7 +8,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <title>Insert title here</title>
+=======
+<title>CuentaWeb</title>
+>>>>>>> master
 <link
     rel="Stylesheet"
     type="text/css"

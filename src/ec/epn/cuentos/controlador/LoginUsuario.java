@@ -19,6 +19,31 @@ import ec.epn.cuentos.modelo.Usuario;
 /**
  * Servlet implementation class LoginUsuario
  */
+<<<<<<< HEAD
+=======
+
+
+/**
+*   Copyright (c) 2020, David Yánez, Jersson Andrango, Brandon Toapanta .
+* 
+*   
+*  CuentaWeb is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  CuentaWeb is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
+
+>>>>>>> master
 @Transactional
 @WebServlet("/LoginUsuario")
 public class LoginUsuario extends HttpServlet {
@@ -80,6 +105,15 @@ public class LoginUsuario extends HttpServlet {
 				Query q4 = em.createQuery("SELECT apellido FROM Usuario where correo='"+correo+"'");
 				String ape =String.valueOf(q4.getSingleResult());
 				
+<<<<<<< HEAD
+=======
+				Query q5 = em.createQuery("SELECT sexo FROM Usuario where correo='"+correo+"'");
+				String sexo =String.valueOf(q5.getSingleResult());
+				
+				Query q6 = em.createQuery("SELECT fechanac FROM Usuario where correo='"+correo+"'");
+				String fecha =String.valueOf(q6.getSingleResult());
+				
+>>>>>>> master
 				
 				
 				HttpSession misession= request.getSession();
@@ -91,16 +125,34 @@ public class LoginUsuario extends HttpServlet {
 				HttpSession misession3= request.getSession();
 				misession3.setAttribute("Apellido",ape);
 				
+<<<<<<< HEAD
 				
 				response.sendRedirect("RegiCuen.jsp");
 				
+=======
+				HttpSession misession4= request.getSession();
+				misession4.setAttribute("Sexo",sexo);
+				
+				HttpSession misession5= request.getSession();
+				misession5.setAttribute("Fecha",fecha);
+				
+				HttpSession misession6= request.getSession();
+				misession6.setAttribute("Correo",correo);
+					
+				
+				response.sendRedirect("RegiCuen.jsp");
+>>>>>>> master
 				
 				
 				//request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
 				
 			}else {
 			
+<<<<<<< HEAD
 				request.setAttribute("valError","Contrase�a Incorrecta");
+=======
+				request.setAttribute("valError","Contraseña Incorrecta");
+>>>>>>> master
 				request.getRequestDispatcher("Login.jsp").forward(request,response);
 
 			}

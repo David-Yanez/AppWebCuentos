@@ -1,22 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+        
+ <%@ page import= "java.util.List" %>
+<%@ page import= "ec.epn.cuentos.modelo.Cuento" %>   
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+
 <link
     rel="Stylesheet"
     type="text/css"
     href="css/bootstrap.min.css"
+></link>
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
 ></link>
 
 </head>
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
     
         <ul class="navbar-nav mr-auto">
            
@@ -24,7 +35,7 @@
               <a class="nav-link" href="Index.jsp">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Cuentos.jsp">Cuentos</a>
+              <a class="nav-link" href="ListarCuentos">Cuentos</a>
             </li>
              <li class="nav-item">
               <a class="nav-link" href="Fabulas.jsp">Fábulas</a>
@@ -57,109 +68,48 @@
     <h4 class="text-center bg-success"><a  class="text-white ">Cuentos Clasicos Infantiles</a></h1>
        
        
-        <div class="row">
-        
-        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <p class="text-center">
-       <img  src="img/cenicienta.jpg" height="200px" width="200px" alt="Cenicienta" title="Cenicienta">
-       </p>
-         <h5 class="text-center">Cenicienta</h5>
-         
-         </div>
-         
-         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <p class="text-center">
-       <img  src="img/elgatoconbotas.jpg" height="200px" width="200px" alt="elgatoconbotas" title="elgatoconbotas">
-       </p>
-         <h5 class="text-center">El gato con botas</h5>
-         
-         </div>
-         
-         
-         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <p class="text-center">
-       <img  src="img/bambi.jpg" height="200px" width="200px" alt="bambi" title="bambi">
-       </p>
-         <h5 class="text-center">Bambi</h5>
-         
-         </div>
-         
-         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <p class="text-center">
-       <img  src="img/laratitapresumida.jpg" height="200px" width="200px" alt="laratitapresumida" title="laratitapresumida">
-       </p>
-         <h5 class="text-center">La ratita presumida</h5>
-         
-         </div>
-         
-         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <p class="text-center">
-       <img  src="img/reyleon.jpg" height="200px" width="200px" alt="reyleon" title="reyleon">
-       </p>
-         <h5 class="text-center">El Rey leon</h5>
-         
-         </div>
-         
-         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <p class="text-center">
-       <img  src="img/101dalmatas.jpg" height="200px" width="200px" alt="101dalmatas" title="101dalmatas">
-       </p>
-         <h5 class="text-center">101 dalmatas</h5>
-         
-         </div>
-         
-         
-         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <p class="text-center">
-       <img  src="img/pinocho.jpg" height="200px" width="200px" alt="Pinocho" title="Pinocho">
-       </p>
-         <h5 class="text-center">Pinocho</h5>
-         
-         </div>
-           <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-           
-                <p class="text-center">
-       <img  src="img/Blancanieves.png" height="200px" width="200px" alt="Blanca Nieves" title="Blanca Nieves">
-       </p>
-         <h5 class="text-center">Blanca Nieves</h5>
-           
-         </div>
-           <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-         
-                <p class="text-center">
-       <img  src="img/3cerditos.jpg" height="200px" width="200px" alt="Los 3 Cerditos" title="Los 3 Cerditos">
-       </p>
-         <h5 class="text-center">Los 3 Cerditos</h5>
-         
-         </div>
-           <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
-         
-         <p class="text-center">
-       <img  src="img/caperucitaRoja.jpg" height="200px" width="200px" alt="Caperucita Roja" title="Caperucita Roja">
-       </p>
-         <h5 class="text-center">Caperucita Roja</h5>
-         
-         </div>
-           <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="row">
           
-           
+            	<%
+  		List<Object[]> cuentos;
+  	  		cuentos= (List<Object[]>)request.getAttribute("cuentos");
+  	  		for (Object[] c:cuentos) {
+  	  	//		 int id = new Integer(c[0]);
+  	%> 
+          
+          
+          
+          
+          
+                  <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+  
+         
              <p class="text-center">
-       <img  src="img/aladin.jpg" height="200px" width="200px" alt="Aladin" title="Aladin">
+       <img  src="<%= c[1] %>" height="200px" width="200px" alt="<%= c[0] %>" title="<%= c[0] %>">
        </p>
-         <h5 class="text-center">Aladin</h5> 
-           
+          <a href="<%=c[2]%>" title=”<%=c[0]%>”>
+         <h5 class="text-center"><%= c[0] %></h5></a>
+         
+         
+         
+          <p style="color: #9002F8;" class="text-justify"><b><%= c[3] %></b></p>
+         
+         <br>
          </div>
-        
-        </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
+         
+      
+         
+         <%}%>
+         
+         
+         
+          
+          </div>
+       
+
+
+
+
 
 </body>
 </html>

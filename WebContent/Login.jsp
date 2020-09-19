@@ -7,7 +7,16 @@
 <meta charset="UTF-8">
 <title>Inicio sesión</title>
 
-<link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
+<link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/bootstrap.min.css"
+></link>
+  <link
+    rel="Stylesheet"
+    type="text/css"
+    href="css/estilos.css"
+></link>
 
 </head>
 <body>
@@ -15,13 +24,17 @@
 
 
 
+<<<<<<< HEAD
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+=======
+	<nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; ">
+>>>>>>> master
 
 		<ul class="navbar-nav mr-auto">
 
 			<li class="nav-item"><a class="nav-link" href="Index.jsp">Inicio</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="Cuentos.jsp">Cuentos</a>
+			<li class="nav-item"><a class="nav-link" href="ListarCuentos">Cuentos</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="Fabulas.jsp">Fábulas</a>
 			</li>
@@ -79,15 +92,25 @@
     				<div class="col-md-6 mb-3">
 						<td>Correo:</td>
 							 
+<<<<<<< HEAD
 						<td><input type="text" name="correo" class="form-control is-valid" required
 							value="<%=obtieneAtributo(request, "valCorreo")%>" /></td>
+=======
+						<td><input type="text" name="correo" class="form-control is-valid" 
+						value="<%=obtieneAtributo(request, "valCorreo")%>"	 required/></td>
+>>>>>>> master
 					</div>
 					</div>
 					</tr>
 					<tr>
 						<td>Contraseña:</td>
+<<<<<<< HEAD
 						<td><input type="password" name="password" class="form-control is-valid" required
 							value="<%=obtieneAtributo(request, "valPassword")%>" />
+=======
+						<td><input type="password" name="password" class="form-control is-valid" 
+							value="<%=obtieneAtributo(request, "valPassword")%>" required/>
+>>>>>>> master
 						</td>
 					</tr>
 					<tr>
