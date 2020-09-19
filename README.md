@@ -18,19 +18,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.<br/>
 
 
 ec.epn.cuentos.controlador:<br/>
-
- ActualizarCuento<br/>
- EdicionUsuario	<br/>
- EditarCuento	<br/>
- EliminarCuento	<br/>
- EliminarUsuario	<br/>
- ListarCuentos	<br/>
- ListarRegis	<br/>
- LoginUsuario	<br/>
- RegistroCuento	<br/>
- RegistroUsuario	<br/>
+ -ActualizarCuento<br/>
+ -EdicionUsuario	<br/>
+ -EditarCuento	<br/>
+ -EliminarCuento	<br/>
+ -EliminarUsuario	<br/>
+ -ListarCuentos	<br/>
+ -ListarRegis	<br/>
+ -LoginUsuario	<br/>
+ -RegistroCuento	<br/>
+ -RegistroUsuario	<br/>
 
 ec.epn.cuentos.modelo<br/>
-
- Cuento	<br/>
- Usuario<br/>
+ -Cuento	<br/>
+ -Usuario<br/>
