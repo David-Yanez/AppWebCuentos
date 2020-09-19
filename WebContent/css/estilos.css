@@ -1,7 +1,8 @@
+/*@charset "utf-8";*/
 h1{
     color: red;
 }
-@charset "utf-8";
+/*@charset "utf-8";
 /* CSS Document */
 
 body
@@ -12,8 +13,7 @@ margin:0 auto;
 padding:0px;
 font-family:verdana;
 background-color:#cccccc;
-background: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-fairy-tale-wind-painting-early-morning-road-background-design-talecute-backgroundpainted-image_64313.jpg) no-repeat center center fixed; 
-
+background: url(https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fon.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -60,5 +60,6 @@ font-size:18px;
     transition: all .15s linear;
     text-decoration:none;
 }
+
 
 
