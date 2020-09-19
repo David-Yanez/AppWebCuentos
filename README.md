@@ -16,6 +16,10 @@ GNU General Public License for more details.<br/>
 You should have received a copy of the GNU General Public License<br/>
 along with this program.  If not, see <https://www.gnu.org/licenses/>.<br/>
 
+<br/>
+CuentaWeb fue creado con el ámbito de fomentar la lectura en los niños y proveer libre acceso a los cuentos infantiles, para que los niños puedan tener escoger sus cuentos y fabulas favoritas cuando lo deseen, se diviertan y aprendan que pueden disfrutar de un cuento o fabula en cualquier momento, ya que la literatura infantil es un estímulo para fomentar en el niño el hábito lector, ya que contribuye al desarrollo del lenguaje, la creación literaria e imaginación, puesto que admite vivir una serie de experiencias y situaciones que le ayudarán a adquirir mayor seguridad en sí mismo a integrarse y formar parte del mundo que le rodea.
+<br/>
+
 
 ec.epn.cuentos.controlador:<br/>
  -ActualizarCuento<br/>
