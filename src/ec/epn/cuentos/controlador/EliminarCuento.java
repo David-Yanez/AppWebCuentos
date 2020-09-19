@@ -29,15 +29,20 @@ public class EliminarCuento extends HttpServlet {
      */
     public EliminarCuento() {
         super();
-        // TODO Auto-generated constructor stub
+  
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+    /**
+     * Este metodo nos permite eliminar un cuento que este registrado
+     * @param recibe el id del cuento
+     * @return  elimina el cuento registrado
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	//	response.getWriter().append("Served at: ").append(request.getContextPath());
+	
 	
 		String parametro = request.getParameter("id_cuentos");
 		
@@ -53,7 +58,7 @@ public class EliminarCuento extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		doGet(request, response);
 	}
 

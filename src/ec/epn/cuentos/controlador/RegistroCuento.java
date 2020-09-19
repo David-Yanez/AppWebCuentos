@@ -24,12 +24,31 @@ import javax.transaction.Transactional;
 import ec.epn.cuentos.modelo.Cuento;
 import ec.epn.cuentos.modelo.Usuario;
 
+
+/**
+*   Copyright (c) 2020, David Yánez, Jersson Andrango, Brandon Toapanta .
+* 
+*   
+*  CuentaWeb is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  CuentaWeb is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
+
 /**
  * Servlet implementation class Impri
  */
 //
-
-
 @Transactional
 @MultipartConfig
 @WebServlet("/RegistroCuento")
@@ -53,7 +72,12 @@ public class RegistroCuento extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
  
-
+    
+    /**
+     * Este metodo nos permite Registrar un cuento 
+     * @param recibe  todos los datos del cuento 
+     * @return  registra en la base de datos el cuento 
+     */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		
@@ -79,13 +103,13 @@ public class RegistroCuento extends HttpServlet {
 		InputStream is = archivo.getInputStream();
 		InputStream is2 = imagen.getInputStream();
 		
-		File f = new File ("C:/Users/daila/Documents/proyecto libres/Archivos/"+nombArch) ;
-	   File f2 = new File ("C:/Users/daila/Documents/proyecto libres/Imagenes/"+nombImg) ;
+		File f = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/pdf/"+nombArch) ;
+	   File f2 = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/img/"+nombImg) ;
 	
 		
 	
 
-	
+	// valida que no haya campos vacios  aunque tambien se lo hace mediante css 
 		if (tipo.trim().equals("") || nombrecu.trim().equals("") || genero.trim().equals("") || autor.trim().equals("") || descripcion.trim().equals("") || id_usuario.trim().equals("") ) {
 			
 	
@@ -96,8 +120,10 @@ public class RegistroCuento extends HttpServlet {
 				
 		
 		}else {
-			int id_us = Integer.parseInt(id_usuario);
 			
+			int id_us = Integer.parseInt(id_usuario);
+		
+		
 	 Cuento Cuen = new Cuento ();
 	 Usuario us = new Usuario ();
 	 us.setId_usuario(id_us);
@@ -131,15 +157,14 @@ public class RegistroCuento extends HttpServlet {
 			Cuen.setNombrecu(nombrecu);
 			Cuen.setAutor(autor);
 			Cuen.setDescripcion(descripcion);
-			Cuen.setArchivo("C:/Users/daila/Documents/proyecto libres/Archivos/"+nombArch);
-			Cuen.setImagen("C:/Users/daila/Documents/proyecto libres/Imagenes/"+nombImg);
+			Cuen.setId_usuario(us);
+			Cuen.setArchivo("pdf/"+nombArch);
+			Cuen.setImagen("img/"+nombImg);
+		
+			em.persist(Cuen);  
 			
 		
 	
-			Cuen.setId_usuario(us);
-			
-			
-			em.persist(Cuen);  
 			
 			request.getRequestDispatcher("ListarRegis").forward(request, response);
 		}
@@ -151,7 +176,7 @@ public class RegistroCuento extends HttpServlet {
 	 */
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	
 		doGet(request, response);
 	}
 
