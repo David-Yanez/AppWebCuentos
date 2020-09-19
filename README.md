@@ -17,19 +17,21 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-ec.epn.cuentos.controlador	 
-  ActualizarCuento	
-  EdicionUsuario	
-  EditarCuento	
-  EliminarCuento	
-  EliminarUsuario	
-  ListarCuentos	
-  ListarRegis	
-  LoginUsuario	
-  RegistroCuento	
-  RegistroUsuario	
+ec.epn.cuentos.controlador:
+
+ActualizarCuento	
+EdicionUsuario	
+EditarCuento	
+EliminarCuento	
+EliminarUsuario	
+ListarCuentos	
+ListarRegis	
+LoginUsuario	
+RegistroCuento	
+RegistroUsuario	
 
 
 ec.epn.cuentos.modelo
-  Cuento	 
-  Usuario
+
+Cuento	 
+Usuario
