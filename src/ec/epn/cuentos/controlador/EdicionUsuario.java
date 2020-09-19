@@ -77,7 +77,7 @@ public class EdicionUsuario extends HttpServlet {
 		
 		if(!passVerdadera.equals(password)) {
 			
-			request.setAttribute("valError","Contrase�a no coincider");
+			request.setAttribute("valError","Contraseña no coincider");
 			request.getRequestDispatcher("EditarUsuario.jsp?id="+id+"&nombre="+nombre+"&apellido="+apellido+"&sexo="+sexo+"&fecha="+fechaN+"&correo="+correo).forward(request,response);
 			
 		}else {

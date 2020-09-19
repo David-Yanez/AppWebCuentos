@@ -160,7 +160,7 @@ public class RegistroUsuario extends HttpServlet {
 				request.setAttribute("valCorreo",correo);
 
 				
-				request.setAttribute("valError","Contrase�as no coinciden");
+				request.setAttribute("valError","Contraseñas no coinciden");
 				request.getRequestDispatcher("Registrar.jsp").forward(request,response);
 				
 			}else {

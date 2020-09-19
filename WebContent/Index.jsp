@@ -51,9 +51,10 @@
 <body >
 <%if (request.getParameter("cerrar")!=null){
 				
+			System.out.println("ENTREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
 			session.invalidate();	
 				
-			}
+}
 %>
 
 
