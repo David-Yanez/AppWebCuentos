@@ -100,9 +100,9 @@
 
     
       <div class="slider">
-        <div><img  src="img/cuentosInfantiles.jpg" height="400px" width="2000px" alt="hojas" title="hojas"></div>
-        <div><img  src="img/Cuentos2.png" height="400px" width="2000px" alt="cielo" title="cielo"></div>
-        <div><img  src="img/Cuentos3.png" height="400px" width="2000px" alt="rojo" title="rojo"></div>
+        <div><img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/cuentosInfantiles.jpg" height="400px" width="2000px" alt="hojas" title="hojas"></div>
+        <div><img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/Cuentos2.png" height="400px" width="2000px" alt="cielo" title="cielo"></div>
+        <div><img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/Cuentos3.png" height="400px" width="2000px" alt="rojo" title="rojo"></div>
       </div>
     
     </div>
@@ -146,7 +146,7 @@ adaptadas a sus edades. Disfruta de los relatos recogidos en los cuentos clásic
         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/cenicienta.jpg" height="200px" width="200px" alt="Cenicienta" title="Cenicienta">
-       </p>
+       </p>      
        <a href="ListarCuentos" title=”Cenicienta”>
          <h5 class="text-center">Cenicienta</h5></a>
          
