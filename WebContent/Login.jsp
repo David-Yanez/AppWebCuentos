@@ -109,7 +109,7 @@
 						<br>
 				</form>
 			</table>
-			<a class="nav-link" href="Registrar.jsp">Crear cuenta nueva en AppWebCuentos.</a>
+			<a class="nav-link" href="Registrar.jsp">Crear cuenta nueva en CuentaWeb.</a>
 		</center>
 
 
