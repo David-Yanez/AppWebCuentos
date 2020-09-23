@@ -89,6 +89,7 @@ public class EdicionUsuario extends HttpServlet {
 			
 		}else {
 			
+			System.out.print("PASE");
 			
 			fechaNac=Date.valueOf(fechaN);
 			
@@ -103,8 +104,9 @@ public class EdicionUsuario extends HttpServlet {
 			
 			em.persist(u);
 			
-				request.getRequestDispatcher("Index.jsp?cerrar=true").forward(request,response);
-
+			
+				request.getRequestDispatcher("Login.jsp?cerrar=true").forward(request,response);
+			
 			
 			
 		}

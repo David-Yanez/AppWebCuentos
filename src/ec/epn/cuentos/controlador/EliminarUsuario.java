@@ -65,7 +65,7 @@ public class EliminarUsuario extends HttpServlet {
 		Usuario u = em.find(Usuario.class, new Integer(id));
 		em.remove(u);
 
-		request.getRequestDispatcher("Index.jsp?cerrar=true").forward(request,response);
+		request.getRequestDispatcher("Login.jsp?cerrar=true").forward(request,response);
 
 		
 		 

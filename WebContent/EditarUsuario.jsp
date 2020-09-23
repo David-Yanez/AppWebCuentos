@@ -122,7 +122,8 @@
 					<tr>
 						<td>Confirme su contraseña</br>para aplicar los cambios:</td>
 						<td><input type="password" name="password" 
-						class="form-control is-valid" required/></td>
+						value="<%= request.getParameter("password") %>" class="form-control is-valid" required/></td>
+						
 					</tr>
 					<tr>
 					<tr>

@@ -97,8 +97,36 @@ public class LoginUsuario extends HttpServlet {
 			
 			String passwordTraida = (String) q.getSingleResult();
 			
+			Query q9 = em.createQuery("SELECT id_usuario FROM Usuario where correo='"+correo+"'");
+			String idAd =String.valueOf(q9.getSingleResult());
+			String idAdmin="16";
+			String admin="ADMINISTRADOR";
+			
 			if(password.equals(passwordTraida)){
 				
+				if(idAd.equals(idAdmin)) {
+					
+					
+					
+					HttpSession misession2= request.getSession();
+					misession2.setAttribute("Nombre",admin);
+					
+
+					
+					Query qu = em.createQuery("SELECT id_usuario, nombre, apellido, sexo, fechanac, correo, password FROM Usuario");
+
+					
+					List<Object[]> usuarios = qu.getResultList();
+					//List<Cuento> cuentos= q.getResultList();
+					
+					request.setAttribute("usuarios",usuarios);
+					//response.sendRedirect("ListarUsuario.jsp");
+					
+					request.getRequestDispatcher("ListarUsuario.jsp").forward(request,response);
+					
+					
+					
+				}else {
 				
 				Query q2 = em.createQuery("SELECT id_usuario FROM Usuario where correo='"+correo+"'");
 				String id =String.valueOf(q2.getSingleResult());
@@ -138,7 +166,7 @@ public class LoginUsuario extends HttpServlet {
 				
 				response.sendRedirect("RegiCuen.jsp");
 				
-				
+				}
 				//request.getRequestDispatcher("RegiCuen.jsp").forward(request,response);
 				
 			}else {
