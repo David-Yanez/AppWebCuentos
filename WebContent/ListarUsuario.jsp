@@ -59,7 +59,6 @@
       <th scope="col">Sexo</th>
       <th scope="col">Fecha nacimiento</th>
       <th scope="col">Correo</th>
-      <th scope="col">Password</th>
     </tr>
   </thead>
   
@@ -83,7 +82,7 @@
        <td><%= c[3] %></td>
       <td><%= c[4] %></td>
       <td><%= c[5] %></td>
-      <td><%= c[6] %></td>
+
      
     </tr>
  
