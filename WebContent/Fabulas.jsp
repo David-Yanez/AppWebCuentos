@@ -70,7 +70,7 @@
         
         <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
-       <img  src="img/fabulas/elaguilaylaflecha.jpg" height="200px" width="200px" alt="elaguilaylaflecha" title="elaguilaylaflecha">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/elaguilaylaflecha.jpg" height="200px" width="200px" alt="elaguilaylaflecha" title="elaguilaylaflecha">
       </p>
        
    <div class="text-center">
@@ -88,16 +88,27 @@
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
-       <img  src="img/fabulas/lasombradelasno.jpg" height="200px" width="200px" alt="lasombradelasno" title="lasombradelasno">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/lasombradelasno.jpg" height="200px" width="200px" alt="lasombradelasno" title="lasombradelasno">
        </p>
-         <h5 class="text-center">La sombra del asno</h5>
+       <div class="text-center">
+   <a type="button" class="text-center" data-toggle="collapse" data-target="#demo">
+       <div id="demo" class="collapse text-center">
+    Estaba asentada un águila en el pico de un peñasco esperando por la llegada de las liebres. <br/>
+    Mas la vio un cazador, y lanzándole una flecha le atravezó su cuerpo. Viendo el águila entonces <br/>
+    que la flecha estaba construída con plumas de su propia especie exclamó: <br/>
+    -- ¡ Qué tristeza terminar mis días por causa de mis plumas !
+<br/>Más profundo es nuestro dolor cuando nos vencen con nuestras propias armas.
+  </div>
+         
+</div>
+        <h5 class="text-center">El Aguila y la flecha</h5></a>
          
          </div>
          
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
-       <img  src="img/fabulas/lazorrayelespino.jpg" height="200px" width="200px" alt="lazorrayelespino" title="lazorrayelespino">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/lazorrayelespino.jpg" height="200px" width="200px" alt="lazorrayelespino" title="lazorrayelespino">
        </p>
          <h5 class="text-center">La zorra y el espino</h5>
          
@@ -105,7 +116,7 @@
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
-       <img  src="img/fabulas/lamariposayelcaracol.gif" height="200px" width="200px" alt="lamariposayelcaracol" title="lamariposayelcaracol">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/lamariposayelcaracol.gif" height="200px" width="200px" alt="lamariposayelcaracol" title="lamariposayelcaracol">
        </p>
          <h5 class="text-center">La mariposa y el caracol</h5>
          
@@ -113,7 +124,7 @@
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
-       <img  src="img/fabulas/elvientoylalena.jpg" height="200px" width="200px" alt="elvientoylalena" title="elvientoylalena">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/elvientoylalena.jpg" height="200px" width="200px" alt="elvientoylalena" title="elvientoylalena">
        </p>
          <h5 class="text-center">El viento y la lena</h5>
          
@@ -121,7 +132,7 @@
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
-       <img  src="img/fabulas/elpescadorflautista.jpg" height="200px" width="200px" alt="elpescadorflautista" title="elpescadorflautista">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/elpescadorflautista.jpg" height="200px" width="200px" alt="elpescadorflautista" title="elpescadorflautista">
        </p>
          <h5 class="text-center">El pescador flautista</h5>
          
@@ -130,7 +141,7 @@
          
          <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <p class="text-center">
-       <img  src="img/fabulas/elleonlazorrayellobo.jpg" height="200px" width="200px" alt="elleonlazorrayellobo" title="elleonlazorrayellobo">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/elleonlazorrayellobo.jpg" height="200px" width="200px" alt="elleonlazorrayellobo" title="elleonlazorrayellobo">
        </p>
          <h5 class="text-center">El leon la zorra y el lobo</h5>
          
@@ -138,7 +149,7 @@
            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
            
                 <p class="text-center">
-       <img  src="img/fabulas/elgalloyelgato.gif" height="200px" width="200px" alt="elgalloyelgato" title="elgalloyelgato">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/elgalloyelgato.gif" height="200px" width="200px" alt="elgalloyelgato" title="elgalloyelgato">
        </p>
          <h5 class="text-center">El gallo y el gato</h5>
            
@@ -146,7 +157,7 @@
            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
          
                 <p class="text-center">
-       <img  src="img/fabulas/elasnoflautista.jpg" height="200px" width="200px" alt="elasnoflautista" title="elasnoflautista">
+       <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/elasnoflautista.jpg" height="200px" width="200px" alt="elasnoflautista" title="elasnoflautista">
        </p>
          <h5 class="text-center">El asno flautista</h5>
          

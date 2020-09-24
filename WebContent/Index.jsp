@@ -100,9 +100,9 @@
 
     
       <div class="slider">
-        <div><img  src="img/cuentosInfantiles.jpg" height="400px" width="2000px" alt="hojas" title="hojas"></div>
-        <div><img  src="img/Cuentos2.png" height="400px" width="2000px" alt="cielo" title="cielo"></div>
-        <div><img  src="img/Cuentos3.png" height="400px" width="2000px" alt="rojo" title="rojo"></div>
+        <div><img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/cuentosInfantiles.jpg" height="400px" width="2000px" alt="hojas" title="hojas"></div>
+        <div><img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/Cuentos2.png" height="400px" width="2000px" alt="cielo" title="cielo"></div>
+        <div><img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/Cuentos3.png" height="400px" width="2000px" alt="rojo" title="rojo"></div>
       </div>
     
     </div>

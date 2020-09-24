@@ -50,7 +50,7 @@ import ec.epn.cuentos.modelo.Usuario;
  */
 //
 @Transactional
-@MultipartConfig
+@MultipartConfig // para poder registrar 
 @WebServlet("/RegistroCuento")
 public class RegistroCuento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -103,8 +103,8 @@ public class RegistroCuento extends HttpServlet {
 		InputStream is = archivo.getInputStream();
 		InputStream is2 = imagen.getInputStream();
 		
-		File f = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/pdf/"+nombArch) ;
-	   File f2 = new File ("/home/david/eclipse-workspace/AppWebCuentos/WebContent/img/"+nombImg) ;
+		File f = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/pdf/"+nombArch) ;
+	   File f2 = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/img/"+nombImg) ;
 	
 		
 	

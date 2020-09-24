@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>CuentaWeb</title>
 
 
 <link
@@ -85,7 +85,7 @@
   
          
              <p class="text-center">
-       <img  src="<%= c[1] %>" height="200px" width="200px" alt="Cenicienta" title="Cenicienta">
+       <img  src="<%= c[1] %>" height="200px" width="200px" alt="<%= c[0] %>" title="<%= c[0] %>">
        </p>
           <a href="<%= c[2] %>" title=”<%= c[0] %>”>
          <h5 class="text-center"><%= c[0] %></h5></a>
