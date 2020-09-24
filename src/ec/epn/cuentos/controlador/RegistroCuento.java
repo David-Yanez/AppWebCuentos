@@ -58,7 +58,7 @@ import ec.epn.cuentos.modelo.Usuario;
 =======
 >>>>>>> master
 @Transactional
-@MultipartConfig
+@MultipartConfig // para poder registrar 
 @WebServlet("/RegistroCuento")
 public class RegistroCuento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -116,11 +116,16 @@ public class RegistroCuento extends HttpServlet {
 		InputStream is2 = imagen.getInputStream();
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		File f = new File ("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Archivos/"+nombArch) ;
 	   File f2 = new File ("C:/Users/brant/Documents/SEMESTRE 2020-A/Libres/Proyecto/Cuentos/Imagenes/"+nombImg) ;
 =======
 		 File f = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/pdf/"+nombArch) ;
 		 File f2 = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/img/"+nombImg) ;
+>>>>>>> master
+=======
+		File f = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/pdf/"+nombArch) ;
+	   File f2 = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/img/"+nombImg) ;
 >>>>>>> master
 	
 		

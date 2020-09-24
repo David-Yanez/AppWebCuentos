@@ -1,7 +1,11 @@
 h1{
     color: red;
 }
+<<<<<<< HEAD
 
+=======
+/*@charset "utf-8";*/
+>>>>>>> master
 /* CSS Document */
 
 body
@@ -12,7 +16,12 @@ margin:0 auto;
 padding:0px;
 font-family:verdana;
 background-color:#cccccc;
+<<<<<<< HEAD
 background: url(https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fon.jpg) no-repeat center center fixed;
+=======
+background: url(https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fon.jpg) no-repeat center center fixed; 
+
+>>>>>>> master
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <title>Insert title here</title>
 <<<<<<< HEAD
 =======
+=======
+<title>CuentaWeb</title>
+>>>>>>> master
 
 <script type="text/javascript" src="./ActualizarArchivo.js"></script>
 <script type="text/javascript" src="./ActualizarImagen.js"></script>
@@ -44,7 +48,7 @@
 	}	
 %>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg " style="background-color:#CEF5F2; "  >
     
         <ul class="navbar-nav mr-auto">
            

@@ -90,7 +90,18 @@
       <p class="text-center">
        <img  src="https://epnecuador-my.sharepoint.com/personal/luis_yanez_epn_edu_ec/Documents/2020-A%20EPN/Libres/Imagenes/fabulas/lasombradelasno.jpg" height="200px" width="200px" alt="lasombradelasno" title="lasombradelasno">
        </p>
-         <h5 class="text-center">La sombra del asno</h5>
+       <div class="text-center">
+   <a type="button" class="text-center" data-toggle="collapse" data-target="#demo">
+       <div id="demo" class="collapse text-center">
+    Estaba asentada un águila en el pico de un peñasco esperando por la llegada de las liebres. <br/>
+    Mas la vio un cazador, y lanzándole una flecha le atravezó su cuerpo. Viendo el águila entonces <br/>
+    que la flecha estaba construída con plumas de su propia especie exclamó: <br/>
+    -- ¡ Qué tristeza terminar mis días por causa de mis plumas !
+<br/>Más profundo es nuestro dolor cuando nos vencen con nuestras propias armas.
+  </div>
+         
+</div>
+        <h5 class="text-center">El Aguila y la flecha</h5></a>
          
          </div>
          

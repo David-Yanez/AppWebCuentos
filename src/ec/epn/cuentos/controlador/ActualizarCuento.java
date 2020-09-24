@@ -86,12 +86,17 @@ public class ActualizarCuento extends HttpServlet {
 			
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
 			File f = new File ("/home/david/Documentos/Proyecto/Archivos/"+nombArch);
 		    File f2 = new File ("/home/david/Documentos/Proyecto/Imagenes/"+nombImg);
 =======
 			File f = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/pdf/"+nombArch);
 		    File f2 = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/img/"+nombImg);
 		    
+>>>>>>> master
+=======
+			File f = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/pdf/"+nombArch);
+		    File f2 = new File ("C:/Users/daila/Documents/GitHub/AppWebCuentos/WebContent/img/"+nombImg);
 >>>>>>> master
 			
 			
